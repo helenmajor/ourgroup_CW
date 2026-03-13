@@ -1,49 +1,234 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f7f7fb;
-  color: #222;
+  padding: 0;
 }
 
-.hero {
-  background: #1f3c88;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: #f6f8fc;
+  color: #1f2937;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
 }
 
 nav {
-  background: white;
-  padding: 12px 20px;
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 nav a {
-  margin-right: 16px;
   text-decoration: none;
-  color: #1f3c88;
-  font-weight: bold;
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: 0.2s ease;
 }
 
-main {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 0 20px;
+nav a:hover {
+  color: #2563eb;
 }
 
-section {
-  background: white;
-  margin-bottom: 24px;
-  padding: 24px;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+.hero {
+  background: linear-gradient(135deg, #dbeafe, #eef2ff, #f5f3ff);
+  padding: 90px 0 70px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-footer {
+.hero-content {
   text-align: center;
-  padding: 30px;
-  color: #666;
+}
+
+.tag {
+  display: inline-block;
+  background: white;
+  color: #2563eb;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  color: #4b5563;
+  font-size: 1.05rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.section {
+  padding: 70px 0 10px;
+}
+
+.section-heading {
+  margin-bottom: 26px;
+}
+
+.section-heading h2,
+.card h2 {
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.section-heading p {
+  color: #6b7280;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  border: 1px solid #eef2f7;
+}
+
+.card p {
+  color: #4b5563;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.member-card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  border: 1px solid #eef2f7;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+}
+
+.member-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.member-info {
+  padding: 20px;
+}
+
+.member-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.student-id {
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.member-info p:last-child {
+  color: #4b5563;
+}
+
+.footer {
+  margin-top: 60px;
+  padding: 28px 0 40px;
+  text-align: centre;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 72px 0 56px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .card,
+  .member-info {
+    padding: 20px;
+  }
+
+  .member-card img {
+    height: 220px;
+  }
 }
