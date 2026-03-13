@@ -7,66 +7,154 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
-    <h1>CPT208 Process Portfolio</h1>
-    <p>Documenting my iterative design process from brainstorming to final reflection.</p>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="logo">CPT208 Portfolio</div>
+      <nav>
+        <a href="#team">Team</a>
+        <a href="#motivation">Motivation</a>
+        <a href="#research">Research</a>
+        <a href="#journey">User Journey</a>
+        <a href="#wireframes">Wireframes</a>
+        <a href="#iterations">Iterations</a>
+        <a href="#evaluation">Evaluation</a>
+        <a href="#reflection">Reflection</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#motivation">Motivation</a>
-    <a href="#research">Research</a>
-    <a href="#journey">User Journey</a>
-    <a href="#wireframes">Wireframes</a>
-    <a href="#iterations">Iterations</a>
-    <a href="#evaluation">Evaluation</a>
-    <a href="#reflection">Reflection</a>
-    <a href="#technical">Technical Reflection</a>
-  </nav>
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="tag">CPT208 Coursework</p>
+      <h1>Process Portfolio</h1>
+      <p class="hero-text">
+        Documenting our iterative design process from early ideas to final reflection.
+      </p>
+      <a class="btn" href="#team">Meet the Team</a>
+    </div>
+  </section>
 
-  <main>
-    <section id="motivation">
+  <main class="container">
+
+    <section id="team" class="section">
+      <div class="section-heading">
+        <h2>Team Members</h2>
+        <p>Brief introduction of each group member.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="member-card">
+          <img src="assets/images/member1.jpg" alt="Member 1 photo" />
+          <div class="member-info">
+            <h3>Your Name</h3>
+            <p class="student-id">Student ID: 2361XXX</p>
+            <p>
+              I am a Year 2 student at XJTLU majoring in Information and Computing Science.
+              I am interested in interaction design, user experience, and digital product design.
+              In this project, I mainly contribute to research, content organisation, and design development.
+            </p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="assets/images/member2.jpg" alt="Member 2 photo" />
+          <div class="member-info">
+            <h3>Member 2 Name</h3>
+            <p class="student-id">Student ID: 2361XXX</p>
+            <p>
+              I am interested in collaborative design, user research, and interface development.
+              In this project, I mainly contribute to idea generation, analysis, and visual presentation.
+            </p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="assets/images/member3.jpg" alt="Member 3 photo" />
+          <div class="member-info">
+            <h3>Member 3 Name</h3>
+            <p class="student-id">Student ID: 2361XXX</p>
+            <p>
+              I am interested in user-centred design and creative problem solving.
+              In this project, I mainly contribute to concept development, prototyping, and communication.
+            </p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <img src="assets/images/member4.jpg" alt="Member 4 photo" />
+          <div class="member-info">
+            <h3>Member 4 Name</h3>
+            <p class="student-id">Student ID: 2361XXX</p>
+            <p>
+              I am interested in design thinking and digital experiences.
+              In this project, I mainly contribute to teamwork, design refinement, and portfolio organisation.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="motivation" class="section card">
       <h2>Motivation</h2>
-      <p>Why I chose this problem and what I wanted to improve for users.</p>
+      <p>
+        Explain why you chose this problem and what you wanted to improve for users.
+      </p>
     </section>
 
-    <section id="research">
+    <section id="research" class="section card">
       <h2>Research and Brainstorming</h2>
-      <p>Include early ideas, screenshots of notes, references, and design direction.</p>
+      <p>
+        Include early ideas, screenshots of notes, references, and design direction.
+      </p>
     </section>
 
-    <section id="journey">
+    <section id="journey" class="section card">
       <h2>User Journey</h2>
-      <p>Describe the target user, their goals, pain points, and interaction flow.</p>
+      <p>
+        Describe the target user, their goals, pain points, and interaction flow.
+      </p>
     </section>
 
-    <section id="wireframes">
+    <section id="wireframes" class="section card">
       <h2>Wireframes / Figma</h2>
-      <p>Add your sketches and a Figma link here.</p>
+      <p>
+        Add your sketches, low-fidelity wireframes, and Figma link here.
+      </p>
     </section>
 
-    <section id="iterations">
+    <section id="iterations" class="section card">
       <h2>Design Iterations</h2>
-      <p>Show how your design changed over time and why.</p>
+      <p>
+        Show how your design changed over time and explain why the changes were made.
+      </p>
     </section>
 
-    <section id="evaluation">
+    <section id="evaluation" class="section card">
       <h2>Evaluation</h2>
-      <p>Summarise feedback, testing results, and what you learned.</p>
+      <p>
+        Summarise feedback, testing results, and what you learned from evaluation.
+      </p>
     </section>
 
-    <section id="reflection">
+    <section id="reflection" class="section card">
       <h2>Final Reflection</h2>
-      <p>Reflect on strengths, weaknesses, and future improvements.</p>
+      <p>
+        Reflect on strengths, weaknesses, and possible future improvements.
+      </p>
     </section>
 
-    <section id="technical">
+    <section id="technical-reflection" class="section card">
       <h2>Technical Reflection on AI Use</h2>
-      <p>Document prompts, verification methods, and ethical considerations if AI was used.</p>
+      <p>
+        Document prompts, verification methods, and ethical considerations if AI tools were used.
+      </p>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Helenmajor | CPT208 Coursework</p>
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Your Group | CPT208 Coursework</p>
+    </div>
   </footer>
 </body>
 </html>
