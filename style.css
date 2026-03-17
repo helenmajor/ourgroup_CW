@@ -189,6 +189,7 @@ nav a:hover {
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
   border: 1px solid #eef2f7;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding-top: 24px;
 }
 
 .member-card:hover {
@@ -196,14 +197,33 @@ nav a:hover {
   box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
 }
 
-/* 关键修改：证件照完整显示，不裁脸 */
-.member-card img {
+/* 两寸证件照相框 */
+.portrait-frame {
+  width: min(42%, 180px);
+  aspect-ratio: 35 / 49;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+  border: 1px solid #dbe3ee;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+/* 证件照完整显示，不裁剪 */
+.portrait-frame img {
   width: 100%;
-  height: 340px;
+  height: 100%;
   object-fit: contain;
   object-position: center;
-  background: linear-gradient(180deg, #f8fafc, #eef2f7);
-  padding: 16px;
+  border-radius: 8px;
+}
+
+/* 防止旧样式继续影响 */
+.member-card > img {
+  display: none;
 }
 
 .member-info {
@@ -214,16 +234,19 @@ nav a:hover {
   font-size: 1.22rem;
   margin-bottom: 6px;
   color: #111827;
+  text-align: center;
 }
 
 .student-id {
   font-weight: 700;
   color: #2563eb;
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .member-info p:last-child {
   color: #4b5563;
+  text-align: left;
 }
 
 /* Motivation layout */
@@ -306,8 +329,8 @@ nav a:hover {
     align-items: flex-start;
   }
 
-  .member-card img {
-    height: 320px;
+  .portrait-frame {
+    width: min(34%, 170px);
   }
 }
 
@@ -329,12 +352,9 @@ nav a:hover {
     padding: 18px;
   }
 
-  /* 手机端成员证件照仍然完整显示 */
-  .member-card img {
-    height: 300px;
-    object-fit: contain;
-    object-position: center;
-    padding: 14px;
+  .portrait-frame {
+    width: min(46%, 160px);
+    padding: 6px;
   }
 
   .gallery-item img {
@@ -352,9 +372,8 @@ nav a:hover {
 
 /* Small phones */
 @media (max-width: 480px) {
-  .member-card img {
-    height: 280px;
-    padding: 12px;
+  .portrait-frame {
+    width: min(52%, 150px);
   }
 
   .section-heading h2 {
