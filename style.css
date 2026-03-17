@@ -5,7 +5,7 @@
 }
 
 html {
-  scroll-behaviour: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,6 +25,7 @@ img {
   margin: 0 auto;
 }
 
+/* Top navigation */
 .topbar {
   position: sticky;
   top: 0;
@@ -37,7 +38,7 @@ img {
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: centre;
+  align-items: center;
   gap: 20px;
   padding: 16px 0;
 }
@@ -67,6 +68,7 @@ nav a:hover {
   color: #2563eb;
 }
 
+/* Hero */
 .hero {
   background: linear-gradient(135deg, #dbeafe, #eef2ff, #f5f3ff);
   padding: 95px 0 72px;
@@ -136,6 +138,7 @@ nav a:hover {
   background: #eff6ff;
 }
 
+/* Sections */
 .section {
   padding: 72px 0 6px;
 }
@@ -172,6 +175,7 @@ nav a:hover {
   margin-bottom: 22px;
 }
 
+/* Team member cards */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -192,12 +196,14 @@ nav a:hover {
   box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
 }
 
-/* --- 这里是专门为你调整的证件照样式 --- */
+/* 关键修改：证件照完整显示，不裁脸 */
 .member-card img {
   width: 100%;
-  aspect-ratio: 3 / 4; /* 强制采用标准证件照的比例 */
-  object-fit: contain; /* 保证图片完整显示，绝对不裁切人脸 */
-  background-color: #f8fafc; /* 添加极淡的灰蓝色背景，即使图片比例稍有不同，边缘过渡也很自然 */
+  height: 340px;
+  object-fit: contain;
+  object-position: center;
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+  padding: 16px;
 }
 
 .member-info {
@@ -220,6 +226,7 @@ nav a:hover {
   color: #4b5563;
 }
 
+/* Motivation layout */
 .content-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -235,8 +242,10 @@ nav a:hover {
   width: 100%;
   border-radius: 18px;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  object-fit: cover;
 }
 
+/* Gallery */
 .gallery-grid {
   display: grid;
   gap: 20px;
@@ -271,6 +280,7 @@ nav a:hover {
   background: #ffffff;
 }
 
+/* Footer */
 .footer {
   margin-top: 64px;
   padding: 28px 0 42px;
@@ -279,7 +289,7 @@ nav a:hover {
   font-size: 0.95rem;
 }
 
-/* Responsive (手机端适配) */
+/* Tablet */
 @media (max-width: 980px) {
   .card-grid,
   .gallery-grid.three-col,
@@ -295,8 +305,13 @@ nav a:hover {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .member-card img {
+    height: 320px;
+  }
 }
 
+/* Mobile */
 @media (max-width: 700px) {
   .hero {
     padding: 78px 0 58px;
@@ -314,12 +329,39 @@ nav a:hover {
     padding: 18px;
   }
 
-  /* 移除了原本会把证件照压扁的固定高度限制，只针对相册里的风景图做限制 */
+  /* 手机端成员证件照仍然完整显示 */
+  .member-card img {
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    padding: 14px;
+  }
+
   .gallery-item img {
     height: 220px;
   }
 
   nav a {
     font-size: 0.9rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .member-card img {
+    height: 280px;
+    padding: 12px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
   }
 }
