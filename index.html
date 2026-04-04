@@ -3,273 +3,919 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CPT208 Process Portfolio</title>
+  <title>Journey RPG | CPT208 Process Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="topbar">
-    <div class="container nav">
-      <div class="logo">CPT208 Portfolio</div>
-      <nav>
-        <a href="#team">Team</a>
-        <a href="#motivation">Motivation</a>
-        <a href="#research">Research</a>
-        <a href="#journey">User Journey</a>
-        <a href="#wireframes">Wireframes</a>
-        <a href="#iterations">Iterations</a>
+    <div class="container topbar-shell">
+      <a class="brand" href="#overview" aria-label="Go to project overview">
+        <span class="brand-mark">CPT208</span>
+        <span class="brand-copy">
+          <strong>Journey RPG</strong>
+          <small>HCI Process Portfolio</small>
+        </span>
+      </a>
+
+      <nav class="section-nav" aria-label="Case study navigation">
+        <a href="#overview">Overview</a>
+        <a href="#problem">Problem</a>
+        <a href="#literature">Literature</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#insights">Insights</a>
+        <a href="#requirements">Requirements</a>
+        <a href="#persona">Persona</a>
+        <a href="#journey">Journey</a>
+        <a href="#ideation">Ideation</a>
+        <a href="#alternatives">Alternatives</a>
+        <a href="#solution">Solution</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#implementation">Implementation</a>
         <a href="#evaluation">Evaluation</a>
         <a href="#reflection">Reflection</a>
-        <a href="#ai-reflection">AI Reflection</a>
+        <a href="#team">Team</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-content">
-      <p class="tag">CPT208 Coursework</p>
-      <h1>Process Portfolio</h1>
-      <p class="hero-text">
-        This portfolio documents our user-centred design process, including motivation,
-        research, ideation, wireframes, iteration, evaluation, and final reflection.
-      </p>
-      <div class="hero-actions">
-        <a class="btn" href="#team">Meet the Team</a>
-        <a class="btn btn-secondary" href="#motivation">View Portfolio</a>
+  <section id="overview" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker">1. Hero / Project Overview</p>
+        <h1>Journey RPG</h1>
+        <p class="hero-tagline">
+          A gamified study-abroad planning system for XJTLU students preparing for
+          overseas postgraduate applications.
+        </p>
+        <p class="hero-statement">
+          This portfolio reframes the project as an evidence-based UX case study,
+          showing how we translated a fragmented, high-pressure planning journey
+          into a clearer experience built around progress, guidance, and motivation.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#problem">Explore the Case Study</a>
+          <a class="btn btn-secondary" href="#solution">View the Final Direction</a>
+        </div>
+
+        <div class="hero-facts">
+          <article class="fact-card">
+            <span class="fact-label">Users</span>
+            <strong>XJTLU students and advisors</strong>
+          </article>
+          <article class="fact-card">
+            <span class="fact-label">Focus</span>
+            <strong>Motivation, planning, and clarity</strong>
+          </article>
+          <article class="fact-card">
+            <span class="fact-label">Output</span>
+            <strong>Single-page UX case study portfolio</strong>
+          </article>
+          <article class="fact-card">
+            <span class="fact-label">Format</span>
+            <strong>Static HTML and CSS presentation</strong>
+          </article>
+        </div>
       </div>
+
+      <aside class="hero-panel">
+        <div class="hero-panel-card">
+          <p class="panel-label">Project Overview</p>
+          <div class="snapshot-list">
+            <div class="snapshot-item">
+              <span>Challenge</span>
+              <p>
+                Application planning is scattered across websites, spreadsheets,
+                deadlines, and informal advice.
+              </p>
+            </div>
+            <div class="snapshot-item">
+              <span>Design Goal</span>
+              <p>
+                Create a credible but motivating planning experience that helps
+                students move from uncertainty to action.
+              </p>
+            </div>
+            <div class="snapshot-item">
+              <span>Approach</span>
+              <p>
+                Combine user-centred research, journey thinking, competitive
+                review, and iterative interface design.
+              </p>
+            </div>
+          </div>
+
+          <div class="chip-row">
+            <span class="chip">Research synthesis</span>
+            <span class="chip">Competitor review</span>
+            <span class="chip">Journey mapping</span>
+            <span class="chip">Prototype thinking</span>
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
 
   <main class="container">
-
-    <!-- TEAM -->
-    <section id="team" class="section">
-      <div class="section-heading">
-        <h2>Team Members</h2>
-        <p>Brief introduction of each group member.</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="member-card">
-          <div class="portrait-frame">
-            <img src="assets/images/member1.jpg" alt="Member 1 photo" />
-          </div>
-          <div class="member-info">
-            <h3>Your Name</h3>
-            <p class="student-id">Student ID: 2364444</p>
-            <p>
-              Hi, I’m Danyi, a junior student majoring in Information and Computing Science. Currently, I’m enrolled in the Human-Centric Computing course, where I’m developing a gamified graduate application project tailored for students aiming to pursue overseas postgraduate studies. Driven by my passion for combining computing technology with user-centric design, I hope this project can turn the tedious process of gathering application information into an engaging experience, helping more students access essential study-abroad details in a fun, interactive way.
-            </p>
-          </div>
-        </article>
-
-        <article class="member-card">
-          <div class="portrait-frame">
-            <img src="assets/images/member2.jpg" alt="Member 2 photo" />
-          </div>
-          <div class="member-info">
-            <h3>Member 2 Name</h3>
-            <p class="student-id">Student ID: 2361355</p>
-            <p>
-              Hi, I’m Yuxin Zou (helen), and I’m a junior majoring in Information and Computing Science. In my Human-Centric Computing course, I am currently involved in a project that focuses on helping students better understand and navigate the postgraduate application process. I’m especially interested in the connection between computing and user experience, and I enjoy exploring how design can make information clearer, friendlier, and more engaging. I hope our project can offer students a more enjoyable way to learn about overseas study opportunities and application planning.
-            </p>
-          </div>
-        </article>
-
-        <article class="member-card">
-          <div class="portrait-frame">
-            <img src="assets/images/member3.jpg" alt="Member 3 photo" />
-          </div>
-          <div class="member-info">
-            <h3>Member 3 Name</h3>
-            <p class="student-id">Student ID: 2362845</p>
-            <p>
-              Hi, I'm Yihan Fu, a junior student majoring in Information and Computing Science. I'm currently participating in the Human-Centric Computing course, where I'm designing an interactive platform to help students plan their study-abroad journey more efficiently. By combining innovative technology with thoughtful user experience design, I aim to simplify complex information into clear, engaging steps, enabling students to explore overseas opportunities in a motivating and easy-to-follow way.
-            </p>
-          </div>
-        </article>
-
-        <article class="member-card">
-          <div class="portrait-frame">
-            <img src="assets/images/member4.jpg" alt="Member 4 photo" />
-          </div>
-          <div class="member-info">
-            <h3>Member 4 Name</h3>
-            <p class="student-id">Student ID: 2361130</p>
-            <p>
-Hi, I’m Xinlan Wu, a junior majoring in Information and Computing Science. I’m currently taking the Human-Centric Computing course, where I am developing a gamified graduate application platform designed for students who plan to pursue postgraduate studies abroad.
-
-This project aims to transform the often complicated process of collecting graduate application information into a more engaging and interactive experience. By combining computing technology with user-centered design, I hope to make study-abroad information more accessible and easier for students to navigate.
-
-I’m interested in exploring how technology and design can work together to improve user experiences and solve real-world problems.            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- MOTIVATION -->
-    <section id="motivation" class="section">
-      <div class="section-heading">
-        <h2>Motivation</h2>
-        <p>Why we chose this topic and what user problem we aim to address.</p>
-      </div>
-
-      <div class="card">
-        <div class="content-grid">
-          <div class="text-block">
-            <p>
-              Write here why your group selected this project idea. Explain the real-world
-              issue, who is affected, and why this problem is worth solving.
-            </p>
-            <p>
-              You can also mention the initial design opportunity, the user pain points,
-              and the value your solution intends to create.
-            </p>
-          </div>
-          
-            
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section id="research" class="section">
-      <div class="section-heading">
-        <h2>Research and Brainstorming</h2>
-        <p>Evidence, notes, early exploration, and initial idea development.</p>
-      </div>
-
-      <div class="card">
-        <p class="section-intro">
-          Summarise your research process here. You can discuss interviews, observations,
-          questionnaires, competitor analysis, brainstorming notes, and any design references.
+    <section id="problem" class="section">
+      <div class="section-header">
+        <p class="section-kicker">2. Problem / Context</p>
+        <h2>Planning postgraduate study abroad is a long journey with too many disconnected steps</h2>
+        <p class="section-lead">
+          For many XJTLU students, study-abroad preparation is not a single task.
+          It is a sequence of research, comparison, document preparation, and
+          deadline management activities that can feel difficult to structure.
         </p>
+      </div>
 
-        <div class="gallery-grid three-col">
-          
+      <div class="context-layout">
+        <article class="surface-card narrative-card">
+          <p>
+            The project focuses on a student experience shaped by
+            <span class="keyword">information overload</span>,
+            <span class="keyword">unclear priorities</span>,
+            <span class="keyword">long planning horizons</span>, and
+            <span class="keyword">emotional uncertainty</span>.
+          </p>
+          <p>
+            Our design opportunity was to transform this complex process into a
+            guided pathway that still respects academic seriousness while making
+            progress more visible and manageable.
+          </p>
+        </article>
+
+        <div class="pain-grid">
+          <article class="pain-card">
+            <h3>Scattered information sources</h3>
+            <p>
+              Students switch between university websites, social media, notes,
+              and peer advice with no unified planning structure.
+            </p>
+          </article>
+          <article class="pain-card">
+            <h3>Invisible progress</h3>
+            <p>
+              Long-term goals such as applications or language tests provide
+              little short-term feedback, which reduces momentum.
+            </p>
+          </article>
+          <article class="pain-card">
+            <h3>High-stakes comparison work</h3>
+            <p>
+              Comparing destinations, courses, deadlines, and requirements creates
+              cognitive load and decision fatigue.
+            </p>
+          </article>
+          <article class="pain-card">
+            <h3>Uneven support and confidence</h3>
+            <p>
+              Students may receive advice from many channels, but not always at the
+              right time or in the right format for action.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- USER JOURNEY -->
+    <section id="literature" class="section">
+      <div class="section-header">
+        <p class="section-kicker">3. Literature Review</p>
+        <h2>Research themes shaping the design direction</h2>
+        <p class="section-lead">
+          Instead of summarising papers one by one, the review is organised by the
+          major themes that informed the product concept and interaction strategy.
+        </p>
+      </div>
+
+      <div class="theme-grid">
+        <article class="surface-card theme-card">
+          <p class="mini-label">Theme 01</p>
+          <h3>Motivation and sustained engagement</h3>
+          <p>
+            Educational motivation research suggests that visible goals, achievable
+            steps, and timely feedback can help users persist with demanding tasks.
+          </p>
+          <p class="theme-impact">
+            Design implication: break the application journey into quests,
+            milestones, and feedback moments rather than one large task list.
+          </p>
+        </article>
+
+        <article class="surface-card theme-card">
+          <p class="mini-label">Theme 02</p>
+          <h3>Cognitive load and information structure</h3>
+          <p>
+            HCI literature consistently shows that users perform better when
+            complex information is chunked, prioritised, and sequenced clearly.
+          </p>
+          <p class="theme-impact">
+            Design implication: organise study-abroad planning into clear stages
+            with focused actions, not dense information dumps.
+          </p>
+        </article>
+
+        <article class="surface-card theme-card">
+          <p class="mini-label">Theme 03</p>
+          <h3>Trust, guidance, and decision support</h3>
+          <p>
+            Students need more than motivation alone. They also need reliable
+            guidance, credible information, and checkpoints for reflection.
+          </p>
+          <p class="theme-impact">
+            Design implication: combine playful progression with trustworthy
+            resources, advisor touchpoints, and explicit requirements.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="analysis" class="section">
+      <div class="section-header">
+        <p class="section-kicker">4. Product / Competitor Analysis</p>
+        <h2>Existing tools support parts of the journey, but rarely the whole experience</h2>
+        <p class="section-lead">
+          The review focused on what current products do well, what they overlook,
+          and where a student-centred opportunity remains.
+        </p>
+      </div>
+
+      <div class="analysis-grid">
+        <article class="surface-card analysis-card">
+          <p class="mini-label">Category A</p>
+          <h3>University and programme websites</h3>
+          <ul class="bullet-list">
+            <li>Strong on official requirements and factual accuracy.</li>
+            <li>Weak on cross-option comparison and long-term motivation.</li>
+            <li>Often structured around institutions, not student journeys.</li>
+          </ul>
+        </article>
+
+        <article class="surface-card analysis-card">
+          <p class="mini-label">Category B</p>
+          <h3>Productivity tools and note systems</h3>
+          <ul class="bullet-list">
+            <li>Useful for task tracking and deadline capture.</li>
+            <li>Require users to build their own structure from scratch.</li>
+            <li>Lack domain-specific guidance for postgraduate planning.</li>
+          </ul>
+        </article>
+
+        <article class="surface-card analysis-card">
+          <p class="mini-label">Category C</p>
+          <h3>Forums, consultants, and social advice channels</h3>
+          <ul class="bullet-list">
+            <li>Helpful for lived experience and reassurance.</li>
+            <li>Information quality and relevance can vary widely.</li>
+            <li>Advice is often fragmented and difficult to revisit later.</li>
+          </ul>
+        </article>
+      </div>
+
+      <article class="surface-card market-gap">
+        <p class="mini-label">Opportunity Gap</p>
+        <h3>No single product combines structured planning, credible guidance, and motivating progress cues in one student-facing experience</h3>
+        <p>
+          This gap shaped the Journey RPG concept: a system that treats the process
+          as a navigable journey rather than a passive collection of information.
+        </p>
+      </article>
+    </section>
+
+    <section id="insights" class="section">
+      <div class="section-header">
+        <p class="section-kicker">5. Key Insights</p>
+        <h2>The research converged on four design insights</h2>
+        <p class="section-lead">
+          These insights became the bridge between evidence and solution direction.
+        </p>
+      </div>
+
+      <div class="insight-grid">
+        <article class="surface-card insight-card">
+          <span class="insight-number">01</span>
+          <h3>Students need visible progress</h3>
+          <p>
+            Long, uncertain processes become easier to sustain when advancement is
+            shown through clear stages and small wins.
+          </p>
+        </article>
+
+        <article class="surface-card insight-card">
+          <span class="insight-number">02</span>
+          <h3>Guidance must be actionable</h3>
+          <p>
+            Generic advice is less useful than task-ready prompts connected to the
+            student’s current stage of planning.
+          </p>
+        </article>
+
+        <article class="surface-card insight-card">
+          <span class="insight-number">03</span>
+          <h3>Motivation should support, not distract</h3>
+          <p>
+            Gamified elements work best when they reinforce meaningful progress
+            instead of competing with serious decision making.
+          </p>
+        </article>
+
+        <article class="surface-card insight-card">
+          <span class="insight-number">04</span>
+          <h3>Different roles need different visibility</h3>
+          <p>
+            Students want autonomy and reassurance, while advisors need concise
+            evidence of readiness, blockers, and next actions.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="requirements" class="section">
+      <div class="section-header">
+        <p class="section-kicker">6. User Requirements</p>
+        <h2>Requirements translated directly from the research evidence</h2>
+        <p class="section-lead">
+          Each requirement is written as a system obligation so the design remains
+          specific, testable, and grounded in user needs.
+        </p>
+      </div>
+
+      <div class="requirement-grid">
+        <article class="surface-card requirement-card">
+          <p class="requirement-priority">Core requirement</p>
+          <h3>System must structure the study-abroad journey into clear stages.</h3>
+          <p>Users need to know what happens first, what comes next, and what counts as progress.</p>
+        </article>
+
+        <article class="surface-card requirement-card">
+          <p class="requirement-priority">Core requirement</p>
+          <h3>System must make deadlines, tasks, and dependencies visible.</h3>
+          <p>Important milestones should be understandable at a glance rather than hidden in scattered notes.</p>
+        </article>
+
+        <article class="surface-card requirement-card">
+          <p class="requirement-priority">Trust requirement</p>
+          <h3>System must connect playful interaction with credible academic guidance.</h3>
+          <p>Motivation cues should never reduce the seriousness of application decisions.</p>
+        </article>
+
+        <article class="surface-card requirement-card">
+          <p class="requirement-priority">Support requirement</p>
+          <h3>System must provide just-in-time prompts for comparison and preparation.</h3>
+          <p>The interface should surface relevant tasks and advice at the point of need.</p>
+        </article>
+
+        <article class="surface-card requirement-card">
+          <p class="requirement-priority">Communication requirement</p>
+          <h3>System must help advisors understand student readiness quickly.</h3>
+          <p>Status, blockers, and next steps should be legible without reading long descriptions.</p>
+        </article>
+
+        <article class="surface-card requirement-card">
+          <p class="requirement-priority">Motivation requirement</p>
+          <h3>System must sustain momentum across a long planning period.</h3>
+          <p>Students should feel that meaningful work is happening even before applications are submitted.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="persona" class="section">
+      <div class="section-header">
+        <p class="section-kicker">7. Persona</p>
+        <h2>Primary and secondary users in the planning ecosystem</h2>
+        <p class="section-lead">
+          The portfolio emphasises one main student persona while still recognising
+          the advisor perspective that influences feedback, confidence, and decision quality.
+        </p>
+      </div>
+
+      <div class="persona-grid">
+        <article class="surface-card persona-card primary-persona">
+          <div class="persona-topline">
+            <p class="mini-label">Primary Persona</p>
+            <span class="persona-badge">Student user</span>
+          </div>
+          <h3>Lin, 20, XJTLU student exploring overseas postgraduate options</h3>
+          <p class="persona-summary">
+            Motivated to study abroad, but unsure how to organise research, compare
+            options, and maintain momentum across a long decision timeline.
+          </p>
+
+          <div class="persona-columns">
+            <div>
+              <h4>Goals</h4>
+              <ul class="bullet-list">
+                <li>Understand suitable countries, universities, and programmes.</li>
+                <li>Track progress without relying on fragmented spreadsheets.</li>
+                <li>Feel more confident about what to do next.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Frustrations</h4>
+              <ul class="bullet-list">
+                <li>Too much scattered information and inconsistent advice.</li>
+                <li>Difficulty prioritising tasks over time.</li>
+                <li>Low motivation when effort feels invisible.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="surface-card persona-card secondary-persona">
+          <div class="persona-topline">
+            <p class="mini-label">Secondary Persona</p>
+            <span class="persona-badge secondary">Advisor user</span>
+          </div>
+          <h3>Academic advisor or mentor supporting student planning</h3>
+          <p class="persona-summary">
+            Wants a concise overview of student readiness, current blockers, and the
+            tasks that need intervention or reassurance.
+          </p>
+
+          <h4>Needs from the system</h4>
+          <ul class="bullet-list">
+            <li>Quick visibility of progress and missing actions.</li>
+            <li>Evidence that a student has moved beyond passive browsing.</li>
+            <li>A simple basis for more focused conversations.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section id="journey" class="section">
-      <div class="section-heading">
-        <h2>User Journey</h2>
-        <p>Target users, pain points, goals, and step-by-step experience.</p>
+      <div class="section-header">
+        <p class="section-kicker">8. User Journey Map</p>
+        <h2>The journey was mapped as stages, pain points, and intervention opportunities</h2>
+        <p class="section-lead">
+          The visual journey map asset can be added later, but the structure below
+          already captures the intended flow and where the product should help most.
+        </p>
       </div>
 
-      <div class="card">
-        <p class="section-intro">
-          Explain the user journey of your main persona. Describe what the user wants to do,
-          where they experience friction, and how your design improves the journey.
-        </p>
+      <div class="journey-grid">
+        <article class="surface-card journey-stage">
+          <p class="mini-label">Stage 1</p>
+          <h3>Discover</h3>
+          <p><strong>Goal:</strong> Understand why, where, and when to apply.</p>
+          <p><strong>Pain:</strong> The scope feels wide and difficult to narrow.</p>
+          <p><strong>Opportunity:</strong> Guided onboarding and starter pathways.</p>
+        </article>
 
-        <div class="gallery-grid two-col">
-          
+        <article class="surface-card journey-stage">
+          <p class="mini-label">Stage 2</p>
+          <h3>Compare</h3>
+          <p><strong>Goal:</strong> Review courses, requirements, and destinations.</p>
+          <p><strong>Pain:</strong> Comparison work becomes cognitively heavy.</p>
+          <p><strong>Opportunity:</strong> Side-by-side criteria and saved options.</p>
+        </article>
+
+        <article class="surface-card journey-stage">
+          <p class="mini-label">Stage 3</p>
+          <h3>Plan</h3>
+          <p><strong>Goal:</strong> Turn decisions into milestones and tasks.</p>
+          <p><strong>Pain:</strong> Deadlines and dependencies are easily missed.</p>
+          <p><strong>Opportunity:</strong> Timeline view and readiness checkpoints.</p>
+        </article>
+
+        <article class="surface-card journey-stage">
+          <p class="mini-label">Stage 4</p>
+          <h3>Prepare</h3>
+          <p><strong>Goal:</strong> Gather documents, tests, and statements.</p>
+          <p><strong>Pain:</strong> Motivation drops during repetitive preparation work.</p>
+          <p><strong>Opportunity:</strong> Quest framing and milestone feedback.</p>
+        </article>
+
+        <article class="surface-card journey-stage">
+          <p class="mini-label">Stage 5</p>
+          <h3>Apply</h3>
+          <p><strong>Goal:</strong> Submit with confidence and track completion.</p>
+          <p><strong>Pain:</strong> Last-stage uncertainty still feels stressful.</p>
+          <p><strong>Opportunity:</strong> Final review prompts and status reassurance.</p>
+        </article>
+      </div>
+
+      <figure class="artifact-placeholder">
+        <div class="artifact-frame">
+          <span class="artifact-tag">Placeholder for future visual asset</span>
+          <h3>Journey Map Board</h3>
+          <p>
+            Replace this panel with an exported Miro, FigJam, or annotated image
+            showing stages, emotions, pains, and opportunity points.
+          </p>
+        </div>
+      </figure>
+    </section>
+
+    <section id="ideation" class="section">
+      <div class="section-header">
+        <p class="section-kicker">9. Ideation (Crazy 8)</p>
+        <h2>Early ideation used fast sketching around focused design questions</h2>
+        <p class="section-lead">
+          Crazy 8 encouraged breadth before polish. The goal was to test multiple
+          ways of making planning feel clearer, more motivating, and easier to navigate.
+        </p>
+      </div>
+
+      <div class="ideation-layout">
+        <article class="surface-card ideation-card">
+          <p class="mini-label">Design questions</p>
+          <div class="question-row">
+            <span class="question-chip">How might progress feel visible?</span>
+            <span class="question-chip">How might planning feel less overwhelming?</span>
+            <span class="question-chip">How might guidance stay credible and motivating?</span>
+          </div>
+          <p>
+            The sketching phase tested different mental models, including map-based
+            progression, checklist dashboards, and advisor-linked milestone flows.
+          </p>
+        </article>
+
+        <figure class="surface-card crazy8-board">
+          <div class="artifact-heading">
+            <span class="artifact-tag">Placeholder board</span>
+            <h3>Crazy 8 Sketch Set</h3>
+          </div>
+          <div class="crazy8-grid">
+            <div class="sketch-cell">1. Quest map</div>
+            <div class="sketch-cell">2. Dashboard cards</div>
+            <div class="sketch-cell">3. Calendar-first view</div>
+            <div class="sketch-cell">4. Advisor dashboard</div>
+            <div class="sketch-cell">5. Comparison matrix</div>
+            <div class="sketch-cell">6. Level progression</div>
+            <div class="sketch-cell">7. Preparation hub</div>
+            <div class="sketch-cell">8. Reward feedback</div>
+          </div>
+          <p class="artifact-note">
+            Replace these labelled cells with actual Crazy 8 sketches or exported
+            ideation boards when visual evidence is available.
+          </p>
+        </figure>
+      </div>
+    </section>
+
+    <section id="alternatives" class="section">
+      <div class="section-header">
+        <p class="section-kicker">10. Design Alternatives</p>
+        <h2>Three directions were compared before the final concept was selected</h2>
+        <p class="section-lead">
+          The alternatives explore different balances between clarity, motivation,
+          and the seriousness expected of an academic planning tool.
+        </p>
+      </div>
+
+      <div class="alternatives-grid">
+        <article class="surface-card alternative-card">
+          <div class="alternative-label">A</div>
+          <h3>Linear checklist dashboard</h3>
+          <p class="alternative-summary">
+            A structured task manager focused on deadlines, documents, and completion states.
+          </p>
+          <ul class="bullet-list">
+            <li>Very clear and practical.</li>
+            <li>Low emotional engagement.</li>
+            <li>Feels similar to existing productivity tools.</li>
+          </ul>
+        </article>
+
+        <article class="surface-card alternative-card selected">
+          <div class="alternative-label selected-label">B</div>
+          <h3>Journey RPG map</h3>
+          <p class="alternative-summary">
+            A guided pathway that treats preparation as a series of meaningful stages,
+            quests, and readiness milestones.
+          </p>
+          <ul class="bullet-list">
+            <li>Balances motivation with structure.</li>
+            <li>Makes progress and direction visible.</li>
+            <li>Supports both exploration and action.</li>
+          </ul>
+        </article>
+
+        <article class="surface-card alternative-card">
+          <div class="alternative-label">C</div>
+          <h3>Social planning hub</h3>
+          <p class="alternative-summary">
+            A community-led approach centred on peer stories, shared tips, and collaborative support.
+          </p>
+          <ul class="bullet-list">
+            <li>Useful for reassurance and experience sharing.</li>
+            <li>Harder to maintain quality and consistency.</li>
+            <li>Less suitable for clear task sequencing.</li>
+          </ul>
+        </article>
+      </div>
+
+      <article class="decision-banner">
+        <p class="mini-label">Why B was chosen</p>
+        <h3>Option B offered the strongest balance of motivation, structure, and academic credibility</h3>
+        <p>
+          The Journey RPG direction retained the seriousness of application planning
+          while introducing a clearer sense of progression than Option A and a more
+          dependable structure than Option C.
+        </p>
+      </article>
+    </section>
+
+    <section id="solution" class="section">
+      <div class="section-header">
+        <p class="section-kicker">11. Design Solution / Product</p>
+        <h2>The final direction presents study-abroad planning as a guided journey</h2>
+        <p class="section-lead">
+          Journey RPG reframes the product as a progression system where each stage
+          helps students understand goals, complete tasks, and build confidence.
+        </p>
+      </div>
+
+      <div class="solution-spotlight">
+        <article class="surface-card solution-intro">
+          <p>
+            The selected concept combines a map-like progression model with practical
+            planning support. Rather than replacing academic seriousness, the design
+            uses the language of journeys and quests to make effort feel more coherent.
+          </p>
+        </article>
+
+        <div class="feature-grid">
+          <article class="surface-card feature-card">
+            <h3>Quest-based roadmap</h3>
+            <p>Major preparation tasks are grouped into stages so students can see how each step contributes to the larger goal.</p>
+          </article>
+          <article class="surface-card feature-card">
+            <h3>Comparison toolkit</h3>
+            <p>Students can review programmes, destinations, and requirements without losing track of their shortlist.</p>
+          </article>
+          <article class="surface-card feature-card">
+            <h3>Progress and readiness states</h3>
+            <p>Status cues help users understand what is complete, what is blocked, and what needs attention next.</p>
+          </article>
+          <article class="surface-card feature-card">
+            <h3>Advisor touchpoints</h3>
+            <p>Key checkpoints make it easier to convert broad support into focused conversations and timely feedback.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- WIREFRAMES -->
-    <section id="wireframes" class="section">
-      <div class="section-heading">
-        <h2>Wireframes / Figma</h2>
-        <p>Low-fidelity ideas, layout exploration, and interface structure.</p>
+    <section id="prototype" class="section">
+      <div class="section-header">
+        <p class="section-kicker">12. Prototype</p>
+        <h2>Low-fidelity and high-fidelity outputs can be inserted into the portfolio later</h2>
+        <p class="section-lead">
+          The structure below creates dedicated presentation areas for prototype assets,
+          so future screenshots can be dropped in without redesigning the page.
+        </p>
       </div>
 
-      <div class="card">
-        <p class="section-intro">
-          Add your early sketches, low-fidelity wireframes, and Figma screenshots here.
-          You can also explain why you arranged the content in this way.
-        </p>
+      <div class="prototype-grid">
+        <figure class="surface-card prototype-card">
+          <div class="artifact-heading">
+            <span class="artifact-tag">Replace later</span>
+            <h3>Low-fidelity wireframes</h3>
+          </div>
+          <div class="prototype-placeholder lowfi">
+            <span>Wireframe placeholders for screen flow, layout, and information priority</span>
+          </div>
+          <figcaption>
+            Recommended replacement: early sketches or grayscale wireframes showing
+            navigation, dashboard structure, and journey-stage transitions.
+          </figcaption>
+        </figure>
 
-        <div class="gallery-grid three-col">
-          
-        </div>
+        <figure class="surface-card prototype-card">
+          <div class="artifact-heading">
+            <span class="artifact-tag">Replace later</span>
+            <h3>High-fidelity prototype</h3>
+          </div>
+          <div class="prototype-placeholder hifi">
+            <span>Mockup placeholder for polished UI screens and interaction states</span>
+          </div>
+          <figcaption>
+            Recommended replacement: Figma exports or screen captures of the final
+            Journey RPG interface and key flows.
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ITERATIONS -->
-    <section id="iterations" class="section">
-      <div class="section-heading">
-        <h2>Design Iterations</h2>
-        <p>How the design changed over time and why those changes were made.</p>
+    <section id="implementation" class="section">
+      <div class="section-header">
+        <p class="section-kicker">13. Technical Implementation</p>
+        <h2>A simple front-end structure supports a clear and readable case-study presentation</h2>
+        <p class="section-lead">
+          The coursework site is intentionally lightweight. The emphasis is on
+          semantic structure, responsive layout, and a strong visual hierarchy rather
+          than complex interaction logic.
+        </p>
       </div>
 
-      <div class="card">
-        <p class="section-intro">
-          Describe what feedback you received, what problems you noticed, and how you revised
-          the design after each round of iteration.
-        </p>
+      <div class="implementation-grid">
+        <article class="surface-card">
+          <p class="mini-label">Architecture</p>
+          <div class="architecture-flow">
+            <div class="arch-box">
+              <h3>Content Layer</h3>
+              <p>Case-study sections, evidence summaries, and future asset slots.</p>
+            </div>
+            <div class="arch-box">
+              <h3>Presentation Layer</h3>
+              <p>Responsive CSS system using reusable cards, grids, and section styles.</p>
+            </div>
+            <div class="arch-box">
+              <h3>Asset Layer</h3>
+              <p>Member portraits now, with space for journey maps, sketches, and prototype exports later.</p>
+            </div>
+          </div>
+        </article>
 
-        <div class="gallery-grid two-col">
-          
-        </div>
+        <article class="surface-card">
+          <p class="mini-label">Current repo structure</p>
+          <ul class="repo-list">
+            <li><code>index.html</code> holds the complete single-page portfolio structure.</li>
+            <li><code>style.css</code> defines the visual system, components, and responsive layout.</li>
+            <li><code>assets/images/</code> currently stores the four team member portraits.</li>
+          </ul>
+          <p class="implementation-note">
+            No JavaScript is required for the current portfolio presentation. Section
+            navigation and interaction are handled through anchor links and CSS.
+          </p>
+        </article>
       </div>
     </section>
 
-    <!-- EVALUATION -->
     <section id="evaluation" class="section">
-      <div class="section-heading">
-        <h2>Evaluation</h2>
-        <p>Testing, feedback, findings, and design decisions based on evidence.</p>
+      <div class="section-header">
+        <p class="section-kicker">14. Evaluation</p>
+        <h2>Evaluation focuses on what the concept communicates well and what still needs refinement</h2>
+        <p class="section-lead">
+          This section is structured to make findings and improvements visible at a
+          glance, ready to absorb stronger evidence such as user quotes or testing screenshots later.
+        </p>
       </div>
 
-      <div class="card">
-        <p class="section-intro">
-          Summarise your evaluation results here. Mention what methods you used, what users
-          said, what worked well, and what still needs improvement.
-        </p>
+      <div class="method-strip">
+        <article class="surface-card method-card">
+          <p class="mini-label">Method</p>
+          <h3>Peer walkthroughs</h3>
+          <p>Used to test whether the journey structure and page hierarchy feel understandable.</p>
+        </article>
+        <article class="surface-card method-card">
+          <p class="mini-label">Method</p>
+          <h3>Heuristic review</h3>
+          <p>Used to assess clarity, consistency, and whether gamified elements remain appropriate.</p>
+        </article>
+        <article class="surface-card method-card">
+          <p class="mini-label">Method</p>
+          <h3>Content critique</h3>
+          <p>Used to identify where task guidance and comparison information still need sharpening.</p>
+        </article>
+      </div>
 
-        <div class="gallery-grid two-col">
-          
-        </div>
+      <div class="evaluation-grid">
+        <article class="surface-card">
+          <p class="mini-label">Key findings</p>
+          <div class="finding-list">
+            <div class="finding-item">
+              <span>01</span>
+              <p>The journey metaphor improves engagement, but users still need direct access to deadlines and next actions.</p>
+            </div>
+            <div class="finding-item">
+              <span>02</span>
+              <p>Comparison support is essential because motivation alone does not reduce decision complexity.</p>
+            </div>
+            <div class="finding-item">
+              <span>03</span>
+              <p>Playful elements are most credible when paired with explicit requirements and advisor checkpoints.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="surface-card">
+          <p class="mini-label">Improvements identified</p>
+          <div class="improvement-list">
+            <div class="improvement-item">
+              <h3>Strengthen progress visibility</h3>
+              <p>Add clearer stage completion states and a stronger sense of readiness.</p>
+            </div>
+            <div class="improvement-item">
+              <h3>Clarify comparison workflows</h3>
+              <p>Support shortlisting, criteria weighting, and requirement review more directly.</p>
+            </div>
+            <div class="improvement-item">
+              <h3>Refine reward intensity</h3>
+              <p>Keep feedback motivating, but avoid visual elements that feel too game-like for academic planning.</p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- REFLECTION -->
     <section id="reflection" class="section">
-      <div class="section-heading">
-        <h2>Final Reflection</h2>
-        <p>What we learned, what worked, and what could be improved in future.</p>
+      <div class="section-header">
+        <p class="section-kicker">15. Reflection</p>
+        <h2>The process highlighted both the promise and the limits of gamified planning</h2>
+        <p class="section-lead">
+          Reflection focuses on what the team learned, what still needs evidence,
+          and how ethical considerations shaped the design discussion.
+        </p>
       </div>
 
-      <div class="card">
-        <p>
-          Write your final reflection here. You can discuss the overall strengths of your design,
-          the limitations of your process, and how you would improve the project if you had more time.
-        </p>
-        <p>
-          You may also reflect on teamwork, communication, role distribution, and how your
-          understanding of user-centred design changed during the project.
-        </p>
+      <div class="reflection-grid">
+        <article class="surface-card reflection-card">
+          <p class="mini-label">Learning</p>
+          <h3>Designing for motivation requires structural clarity first</h3>
+          <p>
+            The most valuable design move was not adding playful visuals, but
+            re-organising the journey into a form that users can understand and act on.
+          </p>
+        </article>
+
+        <article class="surface-card reflection-card">
+          <p class="mini-label">Limitations</p>
+          <h3>The concept still needs richer real-world validation</h3>
+          <p>
+            Future iterations should include deeper user testing, higher-fidelity task
+            flows, and stronger evidence around how students compare options over time.
+          </p>
+        </article>
+
+        <article class="surface-card reflection-card">
+          <p class="mini-label">Ethics and AI use</p>
+          <h3>Playful systems must remain transparent, supportive, and accountable</h3>
+          <p>
+            Any AI-assisted content, planning suggestions, or design support should be
+            checked against user evidence, course expectations, and the risk of oversimplifying high-stakes decisions.
+          </p>
+        </article>
       </div>
     </section>
 
-    <!-- AI REFLECTION -->
-    <section id="ai-reflection" class="section">
-      <div class="section-heading">
-        <h2>Technical Reflection on AI Use</h2>
-        <p>Prompts, verification process, and critical reflection on how AI was used.</p>
-      </div>
-
-      <div class="card">
-        <p>
-          If your coursework requires AI reflection, document which AI tools were used,
-          what prompts were given, how outputs were verified, and what limitations or risks
-          were identified in the process.
+    <section id="team" class="section team-section">
+      <div class="section-header">
+        <p class="section-kicker">16. Team</p>
+        <h2>The project team behind the portfolio</h2>
+        <p class="section-lead">
+          The final section keeps the focus on contribution and collaboration while
+          remaining lighter than the main project narrative.
         </p>
       </div>
-    </section>
 
+      <div class="team-grid">
+        <article class="member-card">
+          <div class="portrait-frame">
+            <img src="assets/images/member1.jpg" alt="Portrait of Danyi" />
+          </div>
+          <div class="member-info">
+            <h3>Danyi</h3>
+            <p class="student-id">Student ID: 2364444</p>
+            <p class="member-role">Contribution focus: concept framing, motivation narrative, and communicating the value of a gamified planning journey.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="portrait-frame">
+            <img src="assets/images/member2.jpg" alt="Portrait of Yuxin Zou" />
+          </div>
+          <div class="member-info">
+            <h3>Yuxin Zou</h3>
+            <p class="student-id">Student ID: 2361355</p>
+            <p class="member-role">Contribution focus: user context synthesis, interaction critique, and improving how complex information is communicated.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="portrait-frame">
+            <img src="assets/images/member3.jpg" alt="Portrait of Yihan Fu" />
+          </div>
+          <div class="member-info">
+            <h3>Yihan Fu</h3>
+            <p class="student-id">Student ID: 2362845</p>
+            <p class="member-role">Contribution focus: journey planning logic, interface structuring, and refining the step-by-step product flow.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="portrait-frame">
+            <img src="assets/images/member4.jpg" alt="Portrait of Xinlan Wu" />
+          </div>
+          <div class="member-info">
+            <h3>Xinlan Wu</h3>
+            <p class="student-id">Student ID: 2361130</p>
+            <p class="member-role">Contribution focus: portfolio restructuring, case-study presentation, and aligning the product concept with HCI evidence.</p>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Your Group | CPT208 Coursework Portfolio</p>
+      <p>© 2026 Journey RPG | CPT208 Human-Centric Computing Process Portfolio</p>
     </div>
   </footer>
-
 </body>
 </html>
