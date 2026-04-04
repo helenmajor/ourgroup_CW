@@ -725,6 +725,191 @@ p {
     #ffffff;
 }
 
+.commercial-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.competitor-product-card {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(238, 247, 245, 0.9));
+}
+
+.competitor-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  padding: 26px 26px 22px;
+  border-bottom: 1px solid rgba(15, 31, 47, 0.08);
+  background:
+    linear-gradient(135deg, rgba(20, 116, 111, 0.1), rgba(245, 158, 11, 0.08));
+}
+
+.competitor-card-head h3,
+.market-gap-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+.case-link {
+  display: grid;
+  gap: 8px;
+  min-width: min(100%, 310px);
+  padding: 14px 16px;
+  border-radius: 18px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(15, 31, 47, 0.08);
+  box-shadow: 0 12px 22px rgba(15, 23, 42, 0.06);
+  transition: 0.25s ease;
+}
+
+.case-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(20, 116, 111, 0.24);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.1);
+}
+
+.case-link span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.case-link code {
+  white-space: normal;
+  word-break: break-all;
+  background: rgba(20, 116, 111, 0.08);
+  color: var(--hero-bg);
+}
+
+.competitor-section-grid {
+  display: grid;
+  gap: 16px;
+  padding: 22px 26px 26px;
+}
+
+.competitor-panel {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 31, 47, 0.08);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.05);
+}
+
+.competitor-panel h4 {
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.case-step-list,
+.case-bullet-list,
+.case-point-list,
+.market-gap-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 1.2rem;
+}
+
+.case-step-list li,
+.case-bullet-list li,
+.case-point-list li,
+.market-gap-list li {
+  color: var(--muted);
+}
+
+.case-step-list li::marker,
+.case-bullet-list li::marker,
+.case-point-list li::marker,
+.market-gap-list li::marker {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.case-point-list {
+  gap: 14px;
+}
+
+.case-point-list li p + p {
+  margin-top: 4px;
+}
+
+.case-point-list strong {
+  color: var(--ink);
+}
+
+.case-highlight {
+  display: inline;
+  padding: 0 0.18em;
+  border-radius: 0.5em;
+  background: linear-gradient(180deg, rgba(255, 241, 207, 0) 0%, rgba(255, 241, 207, 0) 46%, rgba(255, 241, 207, 0.95) 46%, rgba(255, 241, 207, 0.95) 100%);
+  color: inherit;
+  font-weight: 800;
+}
+
+.relevance-panel {
+  background:
+    linear-gradient(135deg, rgba(20, 116, 111, 0.08), rgba(255, 255, 255, 0.96));
+  border-color: rgba(20, 116, 111, 0.16);
+}
+
+.case-quote {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  padding-left: 16px;
+  border-left: 4px solid rgba(20, 116, 111, 0.4);
+}
+
+.case-quote p:last-child {
+  color: var(--accent-strong);
+}
+
+.case-tension {
+  color: var(--muted-strong);
+  font-weight: 600;
+}
+
+.market-gap-card {
+  display: grid;
+  gap: 16px;
+  background:
+    linear-gradient(135deg, rgba(20, 116, 111, 0.12), rgba(245, 158, 11, 0.12)),
+    #ffffff;
+  border: 1px solid rgba(20, 116, 111, 0.16);
+  box-shadow: var(--shadow-lg);
+}
+
+.market-gap-head {
+  display: grid;
+  gap: 8px;
+}
+
+.market-gap-card p,
+.market-gap-list li {
+  color: var(--muted-strong);
+}
+
 .persona-panel-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1261,6 +1446,7 @@ code {
   .hero-facts,
   .pain-grid,
   .product-grid,
+  .commercial-products-grid,
   .persona-panel-grid,
   .requirement-cluster-grid,
   .evidence-gallery,
@@ -1274,6 +1460,14 @@ code {
 
   .ideation-layout {
     grid-template-columns: 1fr;
+  }
+
+  .competitor-card-head {
+    padding: 22px 22px 18px;
+  }
+
+  .competitor-section-grid {
+    padding: 18px 22px 22px;
   }
 
   .crazy8-grid {
@@ -1330,6 +1524,10 @@ code {
   .section-header h2,
   .block-header h2 {
     font-size: 2rem;
+  }
+
+  .case-link {
+    min-width: 100%;
   }
 
   .crazy8-grid {
