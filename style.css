@@ -1166,15 +1166,31 @@ p {
 }
 
 .sketch-cell {
-  min-height: 110px;
+  margin: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 18px;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px;
   border-radius: 18px;
   border: 1.5px dashed rgba(15, 31, 47, 0.18);
   background: var(--surface-soft);
+}
+
+.sketch-cell img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(15, 31, 47, 0.08);
+}
+
+.sketch-cell figcaption {
+  margin: 0;
   color: var(--muted-strong);
+  font-size: 0.92rem;
   font-weight: 700;
   text-align: center;
 }
@@ -1266,12 +1282,21 @@ p {
   justify-content: center;
   padding: 24px;
   text-align: center;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
 .prototype-placeholder span {
   max-width: 280px;
   color: var(--muted-strong);
   font-weight: 700;
+}
+
+.prototype-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 .prototype-placeholder.lowfi {
@@ -1297,6 +1322,37 @@ p {
       rgba(20, 116, 111, 0.05) 12px,
       rgba(20, 116, 111, 0.05) 24px
     );
+  display: block;
+  padding: 16px;
+}
+
+.hifi-grid {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+}
+
+.hifi-shot {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+
+.hifi-shot img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 31, 47, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.hifi-shot figcaption {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .link-placeholder-card {
@@ -1307,9 +1363,35 @@ p {
 
 .url-placeholder {
   min-height: 180px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
   padding: 20px;
   color: var(--muted-strong);
   font-weight: 700;
+}
+
+.figma-link {
+  display: inline-flex;
+  width: fit-content;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--surface-tint);
+  color: var(--accent-strong);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.figma-link:hover {
+  background: rgba(20, 116, 111, 0.18);
+}
+
+.figma-url {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--muted);
+  word-break: break-all;
 }
 
 .implementation-shell {
@@ -1319,6 +1401,26 @@ p {
 .architecture-card {
   display: grid;
   gap: 20px;
+}
+
+.system-architecture-figure {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.system-architecture-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
+
+.system-architecture-figure figcaption {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .architecture-flow {
@@ -1406,7 +1508,34 @@ code {
 }
 
 .comparison-panel {
+  margin: 0;
   min-height: 240px;
+  display: grid;
+  align-content: start;
+  justify-items: stretch;
+  gap: 10px;
+  padding: 12px;
+}
+
+.comparison-panel img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 31, 47, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.comparison-panel figcaption {
+  margin: 0;
+  align-self: start;
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--accent-strong);
+  font-weight: 800;
 }
 
 .reflection-grid {
