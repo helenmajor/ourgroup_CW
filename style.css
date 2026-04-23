@@ -152,6 +152,27 @@ p {
   transform: translateY(-1px);
 }
 
+.section-nav a[aria-current="page"] {
+  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 12px 24px rgba(20, 116, 111, 0.16);
+}
+
+.section-nav a[aria-current="page"]:hover {
+  color: #ffffff;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+}
+
+.brand[aria-current="page"] .brand-mark {
+  box-shadow: 0 0 0 3px rgba(20, 116, 111, 0.16);
+}
+
+.brand[aria-current="page"] .brand-copy strong {
+  color: var(--accent-strong);
+}
+
 .portfolio-hero {
   position: relative;
   overflow: hidden;
@@ -390,6 +411,35 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.84rem;
   font-weight: 700;
+}
+
+.landing-hero {
+  min-height: calc(100vh - 132px);
+  display: flex;
+  align-items: center;
+}
+
+.landing-copy {
+  max-width: 100%;
+}
+
+.landing-copy h1 {
+  margin-bottom: 0;
+}
+
+.landing-module-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.landing-module-link {
+  display: block;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.landing-module-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .section {
@@ -1672,6 +1722,10 @@ code {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .landing-module-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .product-grid,
   .requirement-cluster-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1715,6 +1769,10 @@ code {
   .gap-analysis-columns,
   .comparison-frame {
     grid-template-columns: 1fr;
+  }
+
+  .landing-module-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ideation-layout {
@@ -1763,6 +1821,10 @@ code {
 
   .portfolio-hero h1 {
     font-size: 3rem;
+  }
+
+  .landing-module-grid {
+    grid-template-columns: 1fr;
   }
 
   .section {
