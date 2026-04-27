@@ -2,103 +2,35 @@ document.documentElement.classList.add("js-motion");
 
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
+  const menuToggle = document.querySelector(".menu-toggle");
+  const siteDrawer = document.getElementById("site-drawer");
+  const desktopQuery = window.matchMedia("(min-width: 901px)");
 
   if (!body) {
     return;
   }
 
-  const menuToggle = document.querySelector(".menu-toggle");
-  const siteDrawer = document.querySelector(".site-drawer");
-  const drawerBackdrop = document.querySelector(".drawer-backdrop");
-  const drawerLinks = siteDrawer
-    ? Array.from(siteDrawer.querySelectorAll("a[href]"))
-    : [];
-  const mobileMediaQuery = window.matchMedia("(max-width: 900px)");
-
-  const syncDrawerState = (isOpen) => {
-    body.classList.toggle("nav-open", isOpen);
-
-    if (menuToggle) {
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-    }
-
-    if (siteDrawer) {
-      siteDrawer.classList.toggle("is-open", isOpen);
-      siteDrawer.setAttribute("aria-hidden", String(!isOpen));
-    }
-
-    if (drawerBackdrop) {
-      drawerBackdrop.classList.toggle("is-visible", isOpen);
-      drawerBackdrop.setAttribute("aria-hidden", String(!isOpen));
-    }
-  };
-
-  const openDrawer = () => {
+  const syncNavigationState = () => {
     if (!menuToggle || !siteDrawer) {
       return;
     }
 
-    syncDrawerState(true);
+    const isDesktop = desktopQuery.matches;
+    const isExpanded = isDesktop ? true : menuToggle.getAttribute("aria-expanded") === "true";
+
+    menuToggle.setAttribute("aria-expanded", String(isExpanded));
+    siteDrawer.classList.toggle("is-open", isExpanded);
   };
 
-  const closeDrawer = () => {
-    if (!menuToggle || !siteDrawer) {
-      return;
-    }
-
-    syncDrawerState(false);
-  };
-
-  const toggleDrawer = () => {
-    if (!menuToggle || !siteDrawer) {
-      return;
-    }
-
-    const isOpen = body.classList.contains("nav-open");
-
-    if (isOpen) {
-      closeDrawer();
-      return;
-    }
-
-    openDrawer();
-  };
-
-  syncDrawerState(false);
-
-  menuToggle?.addEventListener("click", toggleDrawer);
-  drawerBackdrop?.addEventListener("click", closeDrawer);
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape") {
-      return;
-    }
-
-    closeDrawer();
-  });
-
-  drawerLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (!mobileMediaQuery.matches) {
-        return;
-      }
-
-      closeDrawer();
+  if (menuToggle && siteDrawer) {
+    menuToggle.addEventListener("click", () => {
+      const nextState = menuToggle.getAttribute("aria-expanded") !== "true";
+      menuToggle.setAttribute("aria-expanded", String(nextState));
+      siteDrawer.classList.toggle("is-open", nextState);
     });
-  });
 
-  const handleViewportChange = (event) => {
-    if (event.matches) {
-      return;
-    }
-
-    closeDrawer();
-  };
-
-  if (typeof mobileMediaQuery.addEventListener === "function") {
-    mobileMediaQuery.addEventListener("change", handleViewportChange);
-  } else if (typeof mobileMediaQuery.addListener === "function") {
-    mobileMediaQuery.addListener(handleViewportChange);
+    desktopQuery.addEventListener("change", syncNavigationState);
+    syncNavigationState();
   }
 
   const revealTargets = Array.from(
