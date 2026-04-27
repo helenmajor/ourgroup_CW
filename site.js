@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     footerText.innerHTML = "&copy; 2026 Journey RPG | CPT208 Human-Centric Computing Process Portfolio";
   }
 
+  const defaultDesktopCollapsed = true;
   let navOpen = false;
-  let desktopCollapsed = false;
+  let desktopCollapsed = defaultDesktopCollapsed;
 
   const setDesktopState = (collapsed) => {
     if (!siteDrawer) {
@@ -102,13 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      setDesktopState(false);
+      body.classList.remove("sidebar-collapsed");
       setNavigationState(false);
     });
 
     if (desktopQuery.matches) {
-      setDesktopState(false);
+      setDesktopState(desktopCollapsed);
     } else {
+      body.classList.remove("sidebar-collapsed");
       setNavigationState(false);
     }
   }
