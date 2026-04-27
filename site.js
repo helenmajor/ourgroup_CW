@@ -2,9 +2,35 @@ document.documentElement.classList.add("js-motion");
 
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
+  const menuToggle = document.querySelector(".menu-toggle");
+  const siteDrawer = document.getElementById("site-drawer");
+  const desktopQuery = window.matchMedia("(min-width: 901px)");
 
   if (!body) {
     return;
+  }
+
+  const syncNavigationState = () => {
+    if (!menuToggle || !siteDrawer) {
+      return;
+    }
+
+    const isDesktop = desktopQuery.matches;
+    const isExpanded = isDesktop ? true : menuToggle.getAttribute("aria-expanded") === "true";
+
+    menuToggle.setAttribute("aria-expanded", String(isExpanded));
+    siteDrawer.classList.toggle("is-open", isExpanded);
+  };
+
+  if (menuToggle && siteDrawer) {
+    menuToggle.addEventListener("click", () => {
+      const nextState = menuToggle.getAttribute("aria-expanded") !== "true";
+      menuToggle.setAttribute("aria-expanded", String(nextState));
+      siteDrawer.classList.toggle("is-open", nextState);
+    });
+
+    desktopQuery.addEventListener("change", syncNavigationState);
+    syncNavigationState();
   }
 
   const revealTargets = Array.from(
