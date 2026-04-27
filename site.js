@@ -7,6 +7,100 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  const menuToggle = document.querySelector(".menu-toggle");
+  const siteDrawer = document.querySelector(".site-drawer");
+  const drawerBackdrop = document.querySelector(".drawer-backdrop");
+  const drawerLinks = siteDrawer
+    ? Array.from(siteDrawer.querySelectorAll("a[href]"))
+    : [];
+  const mobileMediaQuery = window.matchMedia("(max-width: 900px)");
+
+  const syncDrawerState = (isOpen) => {
+    body.classList.toggle("nav-open", isOpen);
+
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    }
+
+    if (siteDrawer) {
+      siteDrawer.classList.toggle("is-open", isOpen);
+      siteDrawer.setAttribute("aria-hidden", String(!isOpen));
+    }
+
+    if (drawerBackdrop) {
+      drawerBackdrop.classList.toggle("is-visible", isOpen);
+      drawerBackdrop.setAttribute("aria-hidden", String(!isOpen));
+    }
+  };
+
+  const openDrawer = () => {
+    if (!menuToggle || !siteDrawer) {
+      return;
+    }
+
+    syncDrawerState(true);
+  };
+
+  const closeDrawer = () => {
+    if (!menuToggle || !siteDrawer) {
+      return;
+    }
+
+    syncDrawerState(false);
+  };
+
+  const toggleDrawer = () => {
+    if (!menuToggle || !siteDrawer) {
+      return;
+    }
+
+    const isOpen = body.classList.contains("nav-open");
+
+    if (isOpen) {
+      closeDrawer();
+      return;
+    }
+
+    openDrawer();
+  };
+
+  syncDrawerState(false);
+
+  menuToggle?.addEventListener("click", toggleDrawer);
+  drawerBackdrop?.addEventListener("click", closeDrawer);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") {
+      return;
+    }
+
+    closeDrawer();
+  });
+
+  drawerLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (!mobileMediaQuery.matches) {
+        return;
+      }
+
+      closeDrawer();
+    });
+  });
+
+  const handleViewportChange = (event) => {
+    if (event.matches) {
+      return;
+    }
+
+    closeDrawer();
+  };
+
+  if (typeof mobileMediaQuery.addEventListener === "function") {
+    mobileMediaQuery.addEventListener("change", handleViewportChange);
+  } else if (typeof mobileMediaQuery.addListener === "function") {
+    mobileMediaQuery.addListener(handleViewportChange);
+  }
+
   const revealTargets = Array.from(
     document.querySelectorAll(
       [
