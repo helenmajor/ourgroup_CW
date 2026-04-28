@@ -135,63 +135,156 @@
         <div class="section-block">
           <div class="block-header">
             <div>
-              <p class="block-kicker">Usability Testing</p>
-              <h2>Evaluation focuses on what the concept communicates well and what still needs refinement</h2>
+              <p class="block-kicker">Alpha Testing</p>
+              <h2>Pilot testing validated playful engagement and revealed clarity issues</h2>
             </div>
           </div>
 
-          <div class="method-strip">
-            <article class="surface-card method-card">
-              <p class="mini-label">Method</p>
-              <h3>Peer walkthroughs</h3>
-              <p>Used to test whether the journey structure and page hierarchy feel understandable.</p>
-            </article>
-            <article class="surface-card method-card">
-              <p class="mini-label">Method</p>
-              <h3>Heuristic review</h3>
-              <p>Used to assess clarity, consistency, and whether gamified elements remain appropriate.</p>
-            </article>
-            <article class="surface-card method-card">
-              <p class="mini-label">Method</p>
-              <h3>Content critique</h3>
-              <p>Used to identify where task guidance and comparison information still need sharpening.</p>
-            </article>
+          <article class="surface-card narrative-card">
+            <p>
+              We conducted an alpha-version pilot test with three real users to
+              evaluate whether EduMap Journey successfully communicates its core
+              "Playful Experience" objective. The test focused on whether the
+              RPG-style interface reduced the anxiety of postgraduate planning,
+              whether the interaction flow was understandable, and whether the
+              gamified features could motivate users to continue exploring
+              application tasks.
+            </p>
+            <p>
+              The results were analysed using six UEQ dimensions: Attractiveness,
+              Perspicuity, Efficiency, Dependability, Stimulation, and Novelty. The
+              score range is from -3 to +3, where values above 1.5 are generally
+              considered excellent. Overall, the results show that the system
+              performed strongly across all dimensions, especially in emotional
+              engagement and novelty.
+            </p>
+          </article>
+
+          <div class="surface-card matrix-table-wrap">
+            <table class="matrix-table alignment-table">
+              <thead>
+                <tr>
+                  <th>Participant</th>
+                  <th>Tasks Tested</th>
+                  <th>Success Rate</th>
+                  <th>Key Issue Observed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>P1: Year 2 student</strong></td>
+                  <td>Profile setup; explore journey map; identify next preparation task.</td>
+                  <td>TBC from pilot notes</td>
+                  <td>Needed clearer wording for stage labels and the meaning of some RPG roles.</td>
+                </tr>
+                <tr>
+                  <td><strong>P2: Year 3 student</strong></td>
+                  <td>Use material crafting flow; check application task feedback; review progress state.</td>
+                  <td>TBC from pilot notes</td>
+                  <td>Completed the flow, but wanted stronger feedback explaining what each completed action improved.</td>
+                </tr>
+                <tr>
+                  <td><strong>P3: Advisor / teacher persona</strong></td>
+                  <td>Inspect dashboard view; interpret student progress; identify students needing support.</td>
+                  <td>TBC from pilot notes</td>
+                  <td>Understood the monitoring purpose, but requested clearer indicators for risk level and intervention timing.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          <div class="evaluation-grid">
-            <article class="surface-card">
-              <p class="mini-label">Findings</p>
-              <div class="finding-list">
-                <div class="finding-item">
-                  <span>01</span>
-                  <p>The journey metaphor improves engagement, but users still need direct access to deadlines and next actions.</p>
-                </div>
-                <div class="finding-item">
-                  <span>02</span>
-                  <p>Comparison support is essential because motivation alone does not reduce decision complexity.</p>
-                </div>
-                <div class="finding-item">
-                  <span>03</span>
-                  <p>Playful elements are most credible when paired with explicit requirements and advisor checkpoints.</p>
-                </div>
+          <div class="chart-card-grid evaluation-chart-grid">
+            <article class="surface-card chart-analysis-card">
+              <figure class="chart-media">
+                <img
+                  src="assets/images/evaluation/ueq-six-dimensions.png"
+                  alt="UEQ radar chart showing six dimensions of system performance"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="chart-copy">
+                <p class="mini-label">Alpha Testing Result</p>
+                <h3>UEQ Six-Dimension Analysis</h3>
+                <p>
+                  The radar chart shows that Attractiveness achieved the highest
+                  score, 2.75 out of 3, indicating that users had a very positive
+                  first impression of the system. This suggests that the RPG-style
+                  visual design, fantasy map metaphor, and interactive quest
+                  structure effectively changed postgraduate planning from a
+                  stressful information task into a more enjoyable experience.
+                </p>
+                <p>
+                  Novelty also scored highly at 2.60, showing that users perceived
+                  the system as different from traditional planning tools,
+                  information websites, or commercial application platforms. This
+                  supports our design decision to use game-based metaphors such as
+                  map exploration, alchemy crafting, and mission nodes instead of
+                  presenting postgraduate preparation as a static checklist.
+                </p>
+                <p>
+                  Efficiency scored 2.20, which suggests that users could complete
+                  the main exploration tasks without feeling that the playful design
+                  created unnecessary friction. Dependability and Stimulation both
+                  received 2.10, indicating that users generally felt the system was
+                  reliable and motivating.
+                </p>
+                <p>
+                  However, Perspicuity received the lowest score, 1.80. Although
+                  this is still above the excellent threshold, it reveals a clear
+                  direction for refinement. Some users were not immediately sure
+                  what certain abstract roles, tags, or temporary alert messages
+                  meant. This finding directly informed our next iteration: we
+                  replaced vague identity labels with clearer academic indicators,
+                  such as GPA and planning stage, and upgraded weak toast alerts
+                  into richer milestone modals with more actionable feedback.
+                </p>
               </div>
             </article>
 
-            <article class="surface-card">
-              <p class="mini-label">Iterative Refinement</p>
-              <div class="improvement-list">
-                <div class="improvement-item">
-                  <h3>Strengthen progress visibility</h3>
-                  <p>Add clearer stage completion states and a stronger sense of readiness.</p>
-                </div>
-                <div class="improvement-item">
-                  <h3>Clarify comparison workflows</h3>
-                  <p>Support shortlisting, criteria weighting, and requirement review more directly.</p>
-                </div>
-                <div class="improvement-item">
-                  <h3>Refine reward intensity</h3>
-                  <p>Keep feedback motivating, but avoid visual elements that feel too game-like for academic planning.</p>
-                </div>
+            <article class="surface-card chart-analysis-card">
+              <figure class="chart-media">
+                <img
+                  src="assets/images/evaluation/macro-qualities.png"
+                  alt="Bar chart comparing attractiveness, pragmatic quality, and hedonic quality"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="chart-copy">
+                <p class="mini-label">Alpha Testing Result</p>
+                <h3>Macro Quality Analysis</h3>
+                <p>
+                  The bar chart compares three macro-level qualities:
+                  Attractiveness, Pragmatic Quality, and Hedonic Quality.
+                  Attractiveness remained the strongest dimension with a mean value
+                  of 2.75, confirming that the system's visual identity and RPG
+                  metaphor successfully created a strong first impression.
+                </p>
+                <p>
+                  Hedonic Quality reached 2.35, mainly supported by the high Novelty
+                  score and the positive Stimulation score. This means the system
+                  was not only usable, but also emotionally engaging. In the context
+                  of our project, this is especially important because the main
+                  problem is not just that students lack information, but that they
+                  often feel overwhelmed, anxious, or unmotivated when facing
+                  postgraduate planning.
+                </p>
+                <p>
+                  Pragmatic Quality scored 2.03, which is also positive but lower
+                  than Hedonic Quality. This suggests that the system already
+                  supports useful task completion, but its clarity and guidance can
+                  still be improved. The lower Perspicuity score explains this gap:
+                  users enjoyed the concept and could use the system, but some
+                  interaction feedback and task instructions needed to be more
+                  explicit.
+                </p>
+                <p>
+                  Therefore, the macro-quality results validate the main design
+                  direction while also identifying a practical refinement path.
+                  EduMap Journey performs especially well as a playful and motivating
+                  experience, but the next version needs clearer feedback, more
+                  transparent task instructions, and stronger scaffolding for
+                  first-time users.
+                </p>
               </div>
             </article>
           </div>
@@ -224,6 +317,42 @@
                 <figcaption>After</figcaption>
               </figure>
             </div>
+            <div class="refinement-copy">
+              <p class="mini-label">UEQ-Informed Iteration</p>
+              <h3>Iterative Refinement Based on UEQ Feedback</h3>
+              <p>
+                The alpha test revealed that the system's main strength was
+                emotional engagement, while the main weakness was interaction
+                clarity. Users liked the RPG-style design and felt motivated by the
+                map-based journey, but some of them were confused by abstract
+                identity labels and fleeting feedback messages.
+              </p>
+              <p>
+                Based on this finding, we made two major refinements. First, we
+                improved identity clarity. In the earlier version, the system used
+                abstract role labels that were playful but not always meaningful for
+                academic planning. In the refined version, these labels were replaced
+                or supported by clearer academic metrics, such as GPA, target stage,
+                and planning status. This change uses progressive disclosure: users
+                still experience the playful RPG identity, but they can also access
+                concrete information when they need to make serious decisions.
+              </p>
+              <p>
+                Second, we improved feedback visibility. In the earlier version,
+                some actions only triggered short toast alerts, which disappeared
+                quickly and did not clearly explain what the user had achieved. In
+                the refined version, important actions lead to richer milestone
+                modals. These modals provide clearer confirmation, explain the
+                meaning of progress, and guide users toward the next action.
+              </p>
+              <p>
+                These refinements directly address the lower Perspicuity score from
+                the UEQ results. By making the system status more visible and the
+                feedback more actionable, the next version improves both practical
+                usability and hedonic experience. The design remains playful, but it
+                becomes more understandable and supportive for first-time users.
+              </p>
+            </div>
           </article>
         </div>
 
@@ -237,29 +366,57 @@
 
           <div class="reflection-grid">
             <article class="surface-card reflection-card">
-              <p class="mini-label">Learning</p>
-              <h3>Designing for motivation requires structural clarity first</h3>
+              <p class="mini-label">Project Impact</p>
+              <h3>Project Impact and Human-Centric Value</h3>
               <p>
-                The most valuable design move was not adding playful visuals, but
-                re-organising the journey into a form that users can understand and act on.
+                EduMap Journey matters because postgraduate planning is not only an
+                information problem, but also an emotional and cognitive burden. Many
+                students face fragmented information, unclear timelines, commercial
+                agency pressure, and anxiety about whether their profile is good
+                enough. Our system responds to this problem through a human-centric
+                design approach.
+              </p>
+              <p>
+                First, the system helps democratise access to planning knowledge.
+                Instead of requiring students to rely only on expensive agencies or
+                scattered online posts, EduMap Journey provides a self-guided pathway
+                where users can explore school information, application materials,
+                deadlines, and cases at their own pace.
               </p>
             </article>
 
             <article class="surface-card reflection-card">
-              <p class="mini-label">Limitations</p>
-              <h3>The concept still needs richer real-world validation</h3>
+              <p class="mini-label">Well-being</p>
+              <h3>Planning support should reduce emotional burden</h3>
               <p>
-                Future iterations should include deeper user testing, higher-fidelity task
-                flows, and stronger evidence around how students compare options over time.
+                Second, the system prioritises mental health and emotional
+                engagement. By using RPG mechanics, fantasy metaphors, progress
+                feedback, and rewards, the platform creates an emotional buffer
+                between the student and the stressful application process. This does
+                not remove the seriousness of postgraduate planning, but it makes the
+                process feel more approachable and less intimidating.
+              </p>
+              <p>
+                Third, the system supports better guidance from teachers or advisors.
+                The back-end dashboard allows teachers to understand students'
+                progress, engagement, and redemption status. This means guidance can
+                become more timely and evidence-based, rather than only relying on
+                students to ask for help when they are already confused.
               </p>
             </article>
 
             <article class="surface-card reflection-card">
               <p class="mini-label">Ethics and AI use</p>
-              <h3>Playful systems must remain transparent, supportive, and accountable</h3>
+              <h3>Responsible AI support remained manually reviewed</h3>
               <p>
-                Any AI-assisted content, planning suggestions, or design support should be
-                checked against user evidence, course expectations, and the risk of oversimplifying high-stakes decisions.
+                Finally, the project reflects responsible use of AI. AI tools such
+                as Cursor and ChatGPT were used to support coding, wording
+                refinement, and implementation efficiency, but the user research,
+                design logic, evaluation interpretation, and human-centric
+                justification remained manually reviewed by the group. This helps
+                prevent hallucinated content, protects academic integrity, and
+                ensures that the final design decisions are grounded in real user
+                needs.
               </p>
             </article>
           </div>
@@ -327,6 +484,122 @@
             </table>
           </div>
         </div>
+
+        <div class="section-block">
+          <div class="block-header">
+            <div>
+              <p class="block-kicker">References and AI Acknowledgements</p>
+              <h2>Sources used across the process portfolio</h2>
+            </div>
+          </div>
+
+          <div class="surface-card reference-card">
+            <section class="reference-group">
+              <p class="mini-label">Academic Literature</p>
+              <ol class="reference-list">
+                <li>
+                  Deterding, S., Dixon, D., Khaled, R., &amp; Nacke, L. (2011).
+                  <a href="https://doi.org/10.1145/2181037.2181040" target="_blank" rel="noopener noreferrer">
+                    From game design elements to gamefulness: Defining gamification
+                  </a>.
+                  Proceedings of the 15th International Academic MindTrek Conference.
+                </li>
+                <li>
+                  Hamari, J., Koivisto, J., &amp; Sarsa, H. (2014).
+                  <a href="https://doi.org/10.1109/HICSS.2014.377" target="_blank" rel="noopener noreferrer">
+                    Does gamification work? A literature review of empirical studies on gamification
+                  </a>.
+                  47th Hawaii International Conference on System Sciences.
+                </li>
+                <li>
+                  Ricker, A. K., Marquardt, K., &amp; Happe, L. (2026).
+                  <a href="https://arxiv.org/abs/2603.13267" target="_blank" rel="noopener noreferrer">
+                    Gamification Preferences in Digital Education: The Role of Individual Differences
+                  </a>.
+                  arXiv:2603.13267.
+                </li>
+                <li>
+                  Ibisu, A. E. (2024).
+                  <a href="https://arxiv.org/abs/2404.15301" target="_blank" rel="noopener noreferrer">
+                    Development of a Gamification Model for Personalized E-learning
+                  </a>.
+                  arXiv:2404.15301.
+                </li>
+                <li>
+                  Uriawan, W., Firmansyah, D., Mulyana, D., Pratama, D. H. F.,
+                  Lerian, A. J., &amp; Wiguna, F. S. (2025).
+                  <a href="https://arxiv.org/abs/2602.03851" target="_blank" rel="noopener noreferrer">
+                    Gamification-Based Learning Method for Hijaiyah Letters
+                  </a>.
+                  arXiv:2602.03851.
+                </li>
+                <li>
+                  Moldez, C., Crisanto, M. A., Cerdeña, M. G. R., Maranan, D. S.,
+                  &amp; Figueroa, R. (2024).
+                  <a href="https://doi.org/10.5281/zenodo.13691445" target="_blank" rel="noopener noreferrer">
+                    Innovation in Education: Developing and Assessing Gamification in the University of the Philippines Open University Massive Open Online Courses
+                  </a>.
+                  ASEAN Journal of Open and Distance Learning, 16(1), 27-42.
+                </li>
+                <li>
+                  Xiao, Y. (2024).
+                  <a href="https://doi.org/10.1145/3665463.3678846" target="_blank" rel="noopener noreferrer">
+                    Investigating the Implementation and Effects of Personalized Gamification in Education
+                  </a>.
+                  CHI PLAY Companion 2024, 454-457.
+                </li>
+                <li>
+                  Dicheva, D. (2017).
+                  <a href="https://doi.org/10.1145/3134302.3134305" target="_blank" rel="noopener noreferrer">
+                    Gamification in Education: A Passing Trend or a Genuine Potential?
+                  </a>.
+                  Proceedings of the 18th International Conference on Computer Systems and Technologies.
+                </li>
+                <li>
+                  Wang, Z., Zeng, Z., Li, Y., &amp; Ding, Z. (2025).
+                  <a href="https://arxiv.org/abs/2509.11461" target="_blank" rel="noopener noreferrer">
+                    CareerPooler: AI-Powered Metaphorical Pool Simulation Improves Experience and Outcomes in Career Exploration
+                  </a>.
+                  arXiv:2509.11461.
+                </li>
+              </ol>
+            </section>
+
+            <section class="reference-group">
+              <p class="mini-label">Commercial and Design References</p>
+              <ol class="reference-list">
+                <li><a href="https://habitica.com/static/home" target="_blank" rel="noopener noreferrer">Habitica</a>. Used as a reference for RPG task management and reward loops.</li>
+                <li><a href="https://www.hmhco.com/programs/classcraft" target="_blank" rel="noopener noreferrer">Classcraft</a>. Used as a reference for classroom gamification and teacher monitoring.</li>
+                <li><a href="https://www.duolingo.com/" target="_blank" rel="noopener noreferrer">Duolingo</a>. Used as a reference for streaks, bite-sized tasks, and immediate feedback.</li>
+                <li><a href="https://www.unifrog.org/" target="_blank" rel="noopener noreferrer">Unifrog</a>. Used as a reference for university and career planning workflows.</li>
+                <li><a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">Figma</a>. Used for low-fidelity prototyping and design communication.</li>
+                <li><a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Used for hosting the process portfolio website.</li>
+              </ol>
+            </section>
+
+            <section class="reference-group">
+              <p class="mini-label">AI Tool Disclosure</p>
+              <ol class="reference-list">
+                <li>
+                  <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a>
+                  was used for wording refinement, portfolio structure review, and coding assistance.
+                  All AI-assisted content was manually checked against the coursework requirements and
+                  the group's own design decisions.
+                </li>
+                <li>
+                  <a href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer">Cursor</a>
+                  was used as an AI-assisted coding environment for implementation support and debugging.
+                  Generated code was reviewed, adapted, and integrated by the group.
+                </li>
+                <li>
+                  <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Google Gemini</a>
+                  was used to generate visual persona board assets in the Motivation &amp; Research module.
+                  These images are treated as AI-generated illustrative material rather than primary user data.
+                </li>
+              </ol>
+            </section>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -338,5 +611,3 @@
   </footer>
 </body>
 </html>
-
-
