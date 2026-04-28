@@ -2772,15 +2772,20 @@ code {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    z-index: 1200;
+    width: min(88vw, 360px);
     height: 100dvh;
     padding:
       max(76px, calc(58px + env(safe-area-inset-top)))
       20px
       calc(24px + env(safe-area-inset-bottom));
-    border-radius: 0;
-    border-inline: 0;
+    border-radius: 0 24px 24px 0;
+    border-left: 0;
     border-bottom: 0;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(237, 243, 247, 0.76)),
+      rgba(247, 251, 253, 0.84);
+    box-shadow: 20px 0 44px rgba(7, 13, 22, 0.22);
     transform: translateX(-118%);
     opacity: 0;
     visibility: hidden;
@@ -2803,6 +2808,18 @@ code {
   body.nav-open .drawer-backdrop {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .section-nav {
+    gap: 12px;
+  }
+
+  .section-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 13px 15px;
+    font-size: 0.95rem;
   }
 
   .portfolio-hero {
@@ -3031,6 +3048,8 @@ code {
       max(70px, calc(54px + env(safe-area-inset-top)))
       16px
       calc(20px + env(safe-area-inset-bottom));
+    width: min(92vw, 340px);
+    border-radius: 0 20px 20px 0;
   }
 
   .section.portfolio-section {
