@@ -2463,6 +2463,65 @@ code {
   margin-bottom: 8px;
 }
 
+.matrix-table-wrap {
+  overflow-x: auto;
+  padding: 0;
+}
+
+.matrix-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  color: var(--ink);
+}
+
+.matrix-table th,
+.matrix-table td {
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(15, 31, 47, 0.08);
+  vertical-align: top;
+  text-align: left;
+  line-height: 1.55;
+}
+
+.matrix-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(238, 247, 245, 0.98), rgba(228, 241, 238, 0.98));
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.matrix-table tbody tr:nth-child(even) {
+  background: rgba(20, 116, 111, 0.035);
+}
+
+.matrix-table tbody tr:hover {
+  background: rgba(20, 116, 111, 0.075);
+}
+
+.matrix-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.matrix-table td:first-child,
+.matrix-table th:first-child {
+  min-width: 170px;
+}
+
+.literature-matrix-table th:nth-child(2),
+.literature-matrix-table td:nth-child(2) {
+  min-width: 240px;
+}
+
+.alignment-table {
+  min-width: 780px;
+}
+
 .contribution-wrap {
   overflow-x: auto;
 }
