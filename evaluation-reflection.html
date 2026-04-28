@@ -135,63 +135,123 @@
         <div class="section-block">
           <div class="block-header">
             <div>
-              <p class="block-kicker">Usability Testing</p>
-              <h2>Evaluation focuses on what the concept communicates well and what still needs refinement</h2>
+              <p class="block-kicker">Alpha Testing</p>
+              <h2>Pilot testing validated playful engagement and revealed clarity issues</h2>
             </div>
           </div>
 
-          <div class="method-strip">
-            <article class="surface-card method-card">
-              <p class="mini-label">Method</p>
-              <h3>Peer walkthroughs</h3>
-              <p>Used to test whether the journey structure and page hierarchy feel understandable.</p>
-            </article>
-            <article class="surface-card method-card">
-              <p class="mini-label">Method</p>
-              <h3>Heuristic review</h3>
-              <p>Used to assess clarity, consistency, and whether gamified elements remain appropriate.</p>
-            </article>
-            <article class="surface-card method-card">
-              <p class="mini-label">Method</p>
-              <h3>Content critique</h3>
-              <p>Used to identify where task guidance and comparison information still need sharpening.</p>
-            </article>
-          </div>
+          <article class="surface-card narrative-card">
+            <p>
+              We conducted an alpha-version pilot test with three real users to
+              evaluate whether EduMap Journey successfully communicates its core
+              "Playful Experience" objective. The test focused on whether the
+              RPG-style interface reduced the anxiety of postgraduate planning,
+              whether the interaction flow was understandable, and whether the
+              gamified features could motivate users to continue exploring
+              application tasks.
+            </p>
+            <p>
+              The results were analysed using six UEQ dimensions: Attractiveness,
+              Perspicuity, Efficiency, Dependability, Stimulation, and Novelty. The
+              score range is from -3 to +3, where values above 1.5 are generally
+              considered excellent. Overall, the results show that the system
+              performed strongly across all dimensions, especially in emotional
+              engagement and novelty.
+            </p>
+          </article>
 
-          <div class="evaluation-grid">
-            <article class="surface-card">
-              <p class="mini-label">Findings</p>
-              <div class="finding-list">
-                <div class="finding-item">
-                  <span>01</span>
-                  <p>The journey metaphor improves engagement, but users still need direct access to deadlines and next actions.</p>
-                </div>
-                <div class="finding-item">
-                  <span>02</span>
-                  <p>Comparison support is essential because motivation alone does not reduce decision complexity.</p>
-                </div>
-                <div class="finding-item">
-                  <span>03</span>
-                  <p>Playful elements are most credible when paired with explicit requirements and advisor checkpoints.</p>
-                </div>
+          <div class="chart-card-grid evaluation-chart-grid">
+            <article class="surface-card chart-analysis-card">
+              <figure class="chart-media">
+                <img
+                  src="assets/images/evaluation/ueq-six-dimensions.png"
+                  alt="UEQ radar chart showing six dimensions of system performance"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="chart-copy">
+                <p class="mini-label">Alpha Testing Result</p>
+                <h3>UEQ Six-Dimension Analysis</h3>
+                <p>
+                  The radar chart shows that Attractiveness achieved the highest
+                  score, 2.75 out of 3, indicating that users had a very positive
+                  first impression of the system. This suggests that the RPG-style
+                  visual design, fantasy map metaphor, and interactive quest
+                  structure effectively changed postgraduate planning from a
+                  stressful information task into a more enjoyable experience.
+                </p>
+                <p>
+                  Novelty also scored highly at 2.60, showing that users perceived
+                  the system as different from traditional planning tools,
+                  information websites, or commercial application platforms. This
+                  supports our design decision to use game-based metaphors such as
+                  map exploration, alchemy crafting, and mission nodes instead of
+                  presenting postgraduate preparation as a static checklist.
+                </p>
+                <p>
+                  Efficiency scored 2.20, which suggests that users could complete
+                  the main exploration tasks without feeling that the playful design
+                  created unnecessary friction. Dependability and Stimulation both
+                  received 2.10, indicating that users generally felt the system was
+                  reliable and motivating.
+                </p>
+                <p>
+                  However, Perspicuity received the lowest score, 1.80. Although
+                  this is still above the excellent threshold, it reveals a clear
+                  direction for refinement. Some users were not immediately sure
+                  what certain abstract roles, tags, or temporary alert messages
+                  meant. This finding directly informed our next iteration: we
+                  replaced vague identity labels with clearer academic indicators,
+                  such as GPA and planning stage, and upgraded weak toast alerts
+                  into richer milestone modals with more actionable feedback.
+                </p>
               </div>
             </article>
 
-            <article class="surface-card">
-              <p class="mini-label">Iterative Refinement</p>
-              <div class="improvement-list">
-                <div class="improvement-item">
-                  <h3>Strengthen progress visibility</h3>
-                  <p>Add clearer stage completion states and a stronger sense of readiness.</p>
-                </div>
-                <div class="improvement-item">
-                  <h3>Clarify comparison workflows</h3>
-                  <p>Support shortlisting, criteria weighting, and requirement review more directly.</p>
-                </div>
-                <div class="improvement-item">
-                  <h3>Refine reward intensity</h3>
-                  <p>Keep feedback motivating, but avoid visual elements that feel too game-like for academic planning.</p>
-                </div>
+            <article class="surface-card chart-analysis-card">
+              <figure class="chart-media">
+                <img
+                  src="assets/images/evaluation/macro-qualities.png"
+                  alt="Bar chart comparing attractiveness, pragmatic quality, and hedonic quality"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="chart-copy">
+                <p class="mini-label">Alpha Testing Result</p>
+                <h3>Macro Quality Analysis</h3>
+                <p>
+                  The bar chart compares three macro-level qualities:
+                  Attractiveness, Pragmatic Quality, and Hedonic Quality.
+                  Attractiveness remained the strongest dimension with a mean value
+                  of 2.75, confirming that the system's visual identity and RPG
+                  metaphor successfully created a strong first impression.
+                </p>
+                <p>
+                  Hedonic Quality reached 2.35, mainly supported by the high Novelty
+                  score and the positive Stimulation score. This means the system
+                  was not only usable, but also emotionally engaging. In the context
+                  of our project, this is especially important because the main
+                  problem is not just that students lack information, but that they
+                  often feel overwhelmed, anxious, or unmotivated when facing
+                  postgraduate planning.
+                </p>
+                <p>
+                  Pragmatic Quality scored 2.03, which is also positive but lower
+                  than Hedonic Quality. This suggests that the system already
+                  supports useful task completion, but its clarity and guidance can
+                  still be improved. The lower Perspicuity score explains this gap:
+                  users enjoyed the concept and could use the system, but some
+                  interaction feedback and task instructions needed to be more
+                  explicit.
+                </p>
+                <p>
+                  Therefore, the macro-quality results validate the main design
+                  direction while also identifying a practical refinement path.
+                  EduMap Journey performs especially well as a playful and motivating
+                  experience, but the next version needs clearer feedback, more
+                  transparent task instructions, and stronger scaffolding for
+                  first-time users.
+                </p>
               </div>
             </article>
           </div>
@@ -224,6 +284,42 @@
                 <figcaption>After</figcaption>
               </figure>
             </div>
+            <div class="refinement-copy">
+              <p class="mini-label">UEQ-Informed Iteration</p>
+              <h3>Iterative Refinement Based on UEQ Feedback</h3>
+              <p>
+                The alpha test revealed that the system's main strength was
+                emotional engagement, while the main weakness was interaction
+                clarity. Users liked the RPG-style design and felt motivated by the
+                map-based journey, but some of them were confused by abstract
+                identity labels and fleeting feedback messages.
+              </p>
+              <p>
+                Based on this finding, we made two major refinements. First, we
+                improved identity clarity. In the earlier version, the system used
+                abstract role labels that were playful but not always meaningful for
+                academic planning. In the refined version, these labels were replaced
+                or supported by clearer academic metrics, such as GPA, target stage,
+                and planning status. This change uses progressive disclosure: users
+                still experience the playful RPG identity, but they can also access
+                concrete information when they need to make serious decisions.
+              </p>
+              <p>
+                Second, we improved feedback visibility. In the earlier version,
+                some actions only triggered short toast alerts, which disappeared
+                quickly and did not clearly explain what the user had achieved. In
+                the refined version, important actions lead to richer milestone
+                modals. These modals provide clearer confirmation, explain the
+                meaning of progress, and guide users toward the next action.
+              </p>
+              <p>
+                These refinements directly address the lower Perspicuity score from
+                the UEQ results. By making the system status more visible and the
+                feedback more actionable, the next version improves both practical
+                usability and hedonic experience. The design remains playful, but it
+                becomes more understandable and supportive for first-time users.
+              </p>
+            </div>
           </article>
         </div>
 
@@ -237,29 +333,57 @@
 
           <div class="reflection-grid">
             <article class="surface-card reflection-card">
-              <p class="mini-label">Learning</p>
-              <h3>Designing for motivation requires structural clarity first</h3>
+              <p class="mini-label">Project Impact</p>
+              <h3>Project Impact and Human-Centric Value</h3>
               <p>
-                The most valuable design move was not adding playful visuals, but
-                re-organising the journey into a form that users can understand and act on.
+                EduMap Journey matters because postgraduate planning is not only an
+                information problem, but also an emotional and cognitive burden. Many
+                students face fragmented information, unclear timelines, commercial
+                agency pressure, and anxiety about whether their profile is good
+                enough. Our system responds to this problem through a human-centric
+                design approach.
+              </p>
+              <p>
+                First, the system helps democratise access to planning knowledge.
+                Instead of requiring students to rely only on expensive agencies or
+                scattered online posts, EduMap Journey provides a self-guided pathway
+                where users can explore school information, application materials,
+                deadlines, and cases at their own pace.
               </p>
             </article>
 
             <article class="surface-card reflection-card">
-              <p class="mini-label">Limitations</p>
-              <h3>The concept still needs richer real-world validation</h3>
+              <p class="mini-label">Well-being</p>
+              <h3>Planning support should reduce emotional burden</h3>
               <p>
-                Future iterations should include deeper user testing, higher-fidelity task
-                flows, and stronger evidence around how students compare options over time.
+                Second, the system prioritises mental health and emotional
+                engagement. By using RPG mechanics, fantasy metaphors, progress
+                feedback, and rewards, the platform creates an emotional buffer
+                between the student and the stressful application process. This does
+                not remove the seriousness of postgraduate planning, but it makes the
+                process feel more approachable and less intimidating.
+              </p>
+              <p>
+                Third, the system supports better guidance from teachers or advisors.
+                The back-end dashboard allows teachers to understand students'
+                progress, engagement, and redemption status. This means guidance can
+                become more timely and evidence-based, rather than only relying on
+                students to ask for help when they are already confused.
               </p>
             </article>
 
             <article class="surface-card reflection-card">
               <p class="mini-label">Ethics and AI use</p>
-              <h3>Playful systems must remain transparent, supportive, and accountable</h3>
+              <h3>Responsible AI support remained manually reviewed</h3>
               <p>
-                Any AI-assisted content, planning suggestions, or design support should be
-                checked against user evidence, course expectations, and the risk of oversimplifying high-stakes decisions.
+                Finally, the project reflects responsible use of AI. AI tools such
+                as Cursor and ChatGPT were used to support coding, wording
+                refinement, and implementation efficiency, but the user research,
+                design logic, evaluation interpretation, and human-centric
+                justification remained manually reviewed by the group. This helps
+                prevent hallucinated content, protects academic integrity, and
+                ensures that the final design decisions are grounded in real user
+                needs.
               </p>
             </article>
           </div>
@@ -338,5 +462,4 @@
   </footer>
 </body>
 </html>
-
 
