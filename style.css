@@ -3478,10 +3478,8 @@ code {
   }
 }
 
-/* Portfolio readability unification: requirements, ideation, evaluation */
-#user-requirements,
-#ideation-alternatives,
-#evaluation-reflection {
+/* Portfolio readability unification: adapted from XinlanWu21's 3d298cc design pass. */
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) {
   --portfolio-card-bg: linear-gradient(180deg, rgba(13, 27, 42, 0.84), rgba(10, 24, 38, 0.76));
   --portfolio-card-bg-strong: linear-gradient(180deg, rgba(12, 28, 43, 0.94), rgba(9, 22, 35, 0.9));
   --portfolio-card-border: rgba(214, 234, 246, 0.18);
@@ -3489,78 +3487,57 @@ code {
   --portfolio-heading: #f7fbff;
   --portfolio-body: #dbe9f3;
   --portfolio-muted: #b7cadd;
-  --portfolio-soft: #9fb7ca;
   --portfolio-link: #8fd8e8;
   --portfolio-highlight: #f7c86a;
 }
 
-#user-requirements .section-header h2,
-#ideation-alternatives .section-header h2,
-#evaluation-reflection .section-header h2,
-#user-requirements .block-header h2,
-#ideation-alternatives .block-header h2,
-#evaluation-reflection .block-header h2,
-#user-requirements .surface-card h3,
-#ideation-alternatives .surface-card h3,
-#evaluation-reflection .surface-card h3,
-#user-requirements .theme-title,
-#ideation-alternatives .theme-title,
-#evaluation-reflection .theme-title {
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .section-header h2,
+  .block-header h2,
+  .surface-card h3,
+  .theme-title
+) {
   color: var(--portfolio-heading);
   letter-spacing: 0;
   text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
 }
 
-#user-requirements p,
-#ideation-alternatives p,
-#evaluation-reflection p,
-#user-requirements li,
-#ideation-alternatives li,
-#evaluation-reflection li,
-#user-requirements figcaption,
-#ideation-alternatives figcaption,
-#evaluation-reflection figcaption {
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  p,
+  li,
+  figcaption
+) {
   color: var(--portfolio-body);
 }
 
-#user-requirements .block-lead,
-#ideation-alternatives .block-lead,
-#evaluation-reflection .block-lead,
-#user-requirements .section-lead,
-#ideation-alternatives .section-lead,
-#evaluation-reflection .section-lead,
-#user-requirements .alternative-summary,
-#ideation-alternatives .alternative-summary,
-#evaluation-reflection .alternative-summary,
-#user-requirements .figma-url,
-#ideation-alternatives .figma-url,
-#evaluation-reflection .figma-url,
-#user-requirements .reference-list,
-#ideation-alternatives .reference-list,
-#evaluation-reflection .reference-list {
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .block-lead,
+  .section-lead,
+  .alternative-summary,
+  .figma-url,
+  .reference-list
+) {
   color: var(--portfolio-muted);
 }
 
-#user-requirements .surface-card,
-#ideation-alternatives .surface-card,
-#evaluation-reflection .surface-card,
-#user-requirements .section-block-light,
-#ideation-alternatives .section-block-light,
-#evaluation-reflection .section-block-light,
-#user-requirements .requirement-cluster,
-#user-requirements .requirement-detail,
-#user-requirements .detail-card,
-#ideation-alternatives .ideation-card,
-#ideation-alternatives .alternative-card,
-#ideation-alternatives .prototype-card,
-#ideation-alternatives .link-placeholder-card,
-#evaluation-reflection .narrative-card,
-#evaluation-reflection .reflection-card,
-#evaluation-reflection .chart-analysis-card,
-#evaluation-reflection .refinement-placeholder,
-#evaluation-reflection .contribution-wrap,
-#evaluation-reflection .reference-card,
-#evaluation-reflection .matrix-table-wrap {
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .surface-card,
+  .section-block-light,
+  .requirement-cluster,
+  .requirement-detail,
+  .detail-card,
+  .ideation-card,
+  .alternative-card,
+  .prototype-card,
+  .link-placeholder-card,
+  .narrative-card,
+  .reflection-card,
+  .chart-analysis-card,
+  .refinement-placeholder,
+  .contribution-wrap,
+  .reference-card,
+  .matrix-table-wrap
+) {
   background: var(--portfolio-card-bg);
   border: 1px solid var(--portfolio-card-border);
   box-shadow:
@@ -3569,9 +3546,7 @@ code {
   backdrop-filter: blur(18px) saturate(135%);
 }
 
-#user-requirements .section-block > .block-header,
-#ideation-alternatives .section-block > .block-header,
-#evaluation-reflection .section-block > .block-header {
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) .section-block > .block-header {
   padding: 20px 22px;
   border-radius: 24px;
   background: linear-gradient(135deg, rgba(16, 40, 60, 0.72), rgba(9, 22, 35, 0.48));
@@ -3580,34 +3555,22 @@ code {
   backdrop-filter: blur(16px) saturate(130%);
 }
 
-#user-requirements .block-kicker,
-#ideation-alternatives .block-kicker,
-#evaluation-reflection .block-kicker,
-#user-requirements .section-kicker,
-#ideation-alternatives .section-kicker,
-#evaluation-reflection .section-kicker,
-#user-requirements .mini-label,
-#ideation-alternatives .mini-label,
-#evaluation-reflection .mini-label,
-#user-requirements .detail-label,
-#ideation-alternatives .detail-label,
-#evaluation-reflection .detail-label {
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .block-kicker,
+  .section-kicker,
+  .mini-label,
+  .detail-label
+) {
   color: var(--portfolio-highlight);
   letter-spacing: 0.06em;
 }
 
-#user-requirements .source-chip,
-#ideation-alternatives .source-chip,
-#evaluation-reflection .source-chip,
-#user-requirements .question-chip,
-#ideation-alternatives .question-chip,
-#evaluation-reflection .question-chip,
-#user-requirements .artifact-tag,
-#ideation-alternatives .artifact-tag,
-#evaluation-reflection .artifact-tag,
-#user-requirements .visual-label,
-#ideation-alternatives .visual-label,
-#evaluation-reflection .visual-label {
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .source-chip,
+  .question-chip,
+  .artifact-tag,
+  .visual-label
+) {
   background: rgba(143, 216, 232, 0.14);
   color: #dff8ff;
   border: 1px solid rgba(143, 216, 232, 0.34);
@@ -3623,11 +3586,13 @@ code {
     var(--portfolio-card-bg-strong);
 }
 
-#user-requirements .requirement-detail,
-#user-requirements .detail-card,
-#ideation-alternatives .sketch-cell,
-#ideation-alternatives .url-placeholder,
-#evaluation-reflection .comparison-panel {
+:is(
+  #user-requirements .requirement-detail,
+  #user-requirements .detail-card,
+  #ideation-alternatives .sketch-cell,
+  #ideation-alternatives .url-placeholder,
+  #evaluation-reflection .comparison-panel
+) {
   background: rgba(255, 255, 255, 0.07);
   border-color: rgba(214, 234, 246, 0.16);
 }
@@ -3637,10 +3602,12 @@ code {
   background: rgba(9, 22, 35, 0.74);
 }
 
-#ideation-alternatives .sketch-cell figcaption,
-#ideation-alternatives .prototype-card figcaption,
-#evaluation-reflection .comparison-panel figcaption,
-#user-requirements .evidence-caption {
+:is(
+  #ideation-alternatives .sketch-cell figcaption,
+  #ideation-alternatives .prototype-card figcaption,
+  #evaluation-reflection .comparison-panel figcaption,
+  #user-requirements .evidence-caption
+) {
   color: var(--portfolio-muted);
 }
 
@@ -3691,39 +3658,30 @@ code {
   border-radius: var(--radius-xl);
 }
 
-#evaluation-reflection .matrix-table,
-#evaluation-reflection .alignment-table,
-#evaluation-reflection .contribution-table {
+#evaluation-reflection :is(.matrix-table, .alignment-table, .contribution-table) {
   color: var(--portfolio-body);
 }
 
-#evaluation-reflection .matrix-table th,
-#evaluation-reflection .matrix-table td,
-#evaluation-reflection .contribution-table th,
-#evaluation-reflection .contribution-table td {
+#evaluation-reflection :is(.matrix-table th, .matrix-table td, .contribution-table th, .contribution-table td) {
   border-bottom: 1px solid rgba(214, 234, 246, 0.13);
   color: var(--portfolio-body);
 }
 
-#evaluation-reflection .matrix-table thead th,
-#evaluation-reflection .contribution-table thead th {
+#evaluation-reflection :is(.matrix-table thead th, .contribution-table thead th) {
   background: linear-gradient(180deg, rgba(37, 95, 116, 0.96), rgba(14, 47, 66, 0.96));
   color: #f8fcff;
   border-bottom-color: rgba(143, 216, 232, 0.3);
 }
 
-#evaluation-reflection .matrix-table td strong,
-#evaluation-reflection .contribution-table .member-cell {
+#evaluation-reflection :is(.matrix-table td strong, .contribution-table .member-cell) {
   color: #ffffff;
 }
 
-#evaluation-reflection .matrix-table tbody tr:nth-child(even),
-#evaluation-reflection .contribution-table tbody tr:nth-child(even) {
+#evaluation-reflection :is(.matrix-table tbody tr:nth-child(even), .contribution-table tbody tr:nth-child(even)) {
   background: rgba(255, 255, 255, 0.045);
 }
 
-#evaluation-reflection .matrix-table tbody tr:hover,
-#evaluation-reflection .contribution-table tbody tr:hover {
+#evaluation-reflection :is(.matrix-table tbody tr:hover, .contribution-table tbody tr:hover) {
   background: rgba(143, 216, 232, 0.09);
 }
 
@@ -3732,14 +3690,141 @@ code {
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.22);
 }
 
-#user-requirements .bullet-list li,
-#ideation-alternatives .bullet-list li,
-#evaluation-reflection .bullet-list li {
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) .bullet-list li {
   color: var(--portfolio-body);
 }
 
-#user-requirements a,
-#ideation-alternatives a,
-#evaluation-reflection a {
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) a {
   color: var(--portfolio-link);
+}
+
+#project-timeline .timeline-shell::before {
+  background: linear-gradient(180deg, rgba(247, 200, 106, 0.95), rgba(143, 216, 232, 0.86));
+}
+
+#project-timeline .timeline-week::before {
+  background: var(--portfolio-highlight);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+#project-timeline .timeline-week-label {
+  background: linear-gradient(135deg, rgba(16, 40, 60, 0.96), rgba(9, 22, 35, 0.9));
+  color: var(--portfolio-highlight);
+  border: 1px solid rgba(247, 200, 106, 0.3);
+}
+
+#project-timeline .timeline-card {
+  border-color: var(--portfolio-card-border);
+}
+
+#project-timeline .timeline-marker {
+  background: linear-gradient(135deg, #2f9faa, #f0b84f);
+  color: #07101b;
+}
+
+body.page-timeline {
+  --portfolio-card-border: rgba(214, 234, 246, 0.18);
+  --portfolio-card-border-strong: rgba(92, 186, 202, 0.34);
+  --portfolio-heading: #f7fbff;
+  --portfolio-body: #dbe9f3;
+  --portfolio-highlight: #f7c86a;
+  background:
+    linear-gradient(180deg, rgba(7, 16, 28, 0.42) 0%, rgba(7, 16, 28, 0.7) 42%, rgba(13, 27, 42, 0.96) 100%),
+    url("background.png") center top / cover fixed no-repeat,
+    var(--hero-bg);
+}
+
+body.page-timeline main {
+  position: relative;
+  isolation: isolate;
+  min-height: 100dvh;
+}
+
+body.page-timeline main > section {
+  margin-top: 0;
+  padding-top: clamp(92px, 10vh, 124px);
+}
+
+body.page-timeline main::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(245, 158, 11, 0.13), transparent 24%),
+    radial-gradient(circle at 80% 8%, rgba(143, 216, 232, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(7, 16, 28, 0.12), rgba(7, 16, 28, 0.64));
+}
+
+body.page-timeline .magic-title {
+  background-image: linear-gradient(180deg, #ffffff 0%, #eaf4fb 48%, #f7c86a 100%);
+  text-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+}
+
+body.page-timeline main section > .text-center p {
+  color: var(--portfolio-highlight);
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+body.page-timeline .week-badge {
+  color: var(--portfolio-highlight);
+  background: linear-gradient(135deg, rgba(16, 40, 60, 0.92), rgba(9, 22, 35, 0.76));
+  border-color: rgba(247, 200, 106, 0.56);
+  border-radius: 14px;
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px) saturate(130%);
+}
+
+body.page-timeline .magic-line-light {
+  background: linear-gradient(to bottom, transparent, rgba(247, 200, 106, 0.92) 10%, rgba(143, 216, 232, 0.78) 90%, transparent);
+  filter: drop-shadow(0 0 10px rgba(143, 216, 232, 0.32));
+}
+
+body.page-timeline .magic-node-light {
+  background: radial-gradient(circle, #ffffff 0%, #f7c86a 42%, #2f9faa 100%);
+  box-shadow:
+    0 0 18px rgba(247, 200, 106, 0.42),
+    0 0 30px rgba(143, 216, 232, 0.18);
+}
+
+body.page-timeline .group:hover .magic-node-light {
+  box-shadow:
+    0 0 22px rgba(255, 255, 255, 0.74),
+    0 0 34px rgba(247, 200, 106, 0.48);
+}
+
+body.page-timeline .magic-card-light {
+  color: var(--portfolio-body);
+  background:
+    linear-gradient(180deg, rgba(13, 27, 42, 0.82), rgba(10, 24, 38, 0.7)),
+    rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--portfolio-card-border);
+  box-shadow:
+    0 22px 52px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(135%);
+}
+
+body.page-timeline .group:hover .magic-card-light {
+  background:
+    linear-gradient(180deg, rgba(16, 40, 60, 0.88), rgba(10, 24, 38, 0.78)),
+    rgba(255, 255, 255, 0.06);
+  border-color: var(--portfolio-card-border-strong);
+  box-shadow:
+    0 26px 58px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.page-timeline .magic-card-light h3,
+body.page-timeline .magic-card-light .group-hover\:text-amber-500 {
+  color: var(--portfolio-heading);
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.26);
+}
+
+body.page-timeline .magic-card-light p,
+body.page-timeline .magic-card-light .group-hover\:text-stone-800 {
+  color: var(--portfolio-body);
 }
