@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build": "node -e \"const fs=require('fs'); for (const file of ['index.html','project-timeline.html','motivation-research.html','user-requirements.html','ideation-alternatives.html','technical-implementation.html','evaluation-reflection.html','style.css','site.js']) { if (!fs.existsSync(file)) throw new Error(file + ' is missing'); } console.log('Static portfolio build check passed.');\""
+  }
+}

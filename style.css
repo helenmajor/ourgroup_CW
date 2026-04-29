@@ -353,7 +353,9 @@ p {
 .section-nav a {
   position: relative;
   isolation: isolate;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 9px;
   padding: 11px 14px;
   border-radius: 12px;
   text-decoration: none;
@@ -372,6 +374,69 @@ p {
     background var(--duration-medium) var(--motion-soft),
     transform var(--duration-medium) var(--motion-emphasis),
     box-shadow var(--duration-medium) var(--motion-soft);
+}
+
+.section-nav a::after,
+.desktop-top-nav a::before {
+  content: "";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
+  background-image: var(--icon);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.section-nav a::after {
+  order: -1;
+}
+
+.section-nav a:nth-child(1)::after,
+.desktop-top-nav a:nth-child(1)::before {
+  content: "🏠";
+}
+
+.section-nav a:nth-child(2)::after,
+.desktop-top-nav a:nth-child(2)::before {
+  content: "🗓️";
+}
+
+.section-nav a:nth-child(3)::after,
+.desktop-top-nav a:nth-child(3)::before {
+  content: "🔍";
+}
+
+.section-nav a:nth-child(4)::after,
+.desktop-top-nav a:nth-child(4)::before {
+  content: "👥";
+}
+
+.section-nav a:nth-child(5)::after,
+.desktop-top-nav a:nth-child(5)::before {
+  content: "🎨";
+}
+
+.section-nav a:nth-child(6)::after,
+.desktop-top-nav a:nth-child(6)::before {
+  content: "💻";
+}
+
+.section-nav a:nth-child(7)::after,
+.desktop-top-nav a:nth-child(7)::before {
+  content: "📊";
+}
+
+.section-nav a:nth-child(8)::after,
+.desktop-top-nav a:nth-child(8)::before {
+  content: "🚀";
 }
 
 .nav-link-accent {
@@ -773,6 +838,86 @@ body.is-ready .portfolio-hero::after {
   font-weight: 700;
 }
 
+.section-title-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.92em;
+  height: 0.92em;
+  margin-right: 12px;
+  line-height: 1;
+  background: var(--icon) center / contain no-repeat;
+  filter: invert(1) drop-shadow(0 10px 24px rgba(7, 16, 28, 0.24));
+}
+
+.inline-icon {
+  display: inline-flex;
+  width: 1.08em;
+  height: 1.08em;
+  flex: 0 0 auto;
+  background: var(--icon) center / contain no-repeat;
+}
+
+.btn-secondary .inline-icon {
+  filter: invert(1);
+}
+
+.icon-compass { --icon: url("public/icons/compass.svg"); }
+.icon-rocket { --icon: url("public/icons/rocket.svg"); }
+.icon-globe { --icon: url("public/icons/globe.svg"); }
+.icon-check { --icon: url("public/icons/check.svg"); }
+.icon-code { --icon: url("public/icons/code.svg"); }
+.icon-document { --icon: url("public/icons/document.svg"); }
+.icon-chat { --icon: url("public/icons/chat.svg"); }
+.icon-chart { --icon: url("public/icons/chart.svg"); }
+.icon-users { --icon: url("public/icons/users.svg"); }
+.icon-book { --icon: url("public/icons/book.svg"); }
+.icon-target { --icon: url("public/icons/target.svg"); }
+.icon-design { --icon: url("public/icons/design.svg"); }
+.icon-tool { --icon: url("public/icons/tool.svg"); }
+.icon-shield { --icon: url("public/icons/shield.svg"); }
+.icon-sparkle { --icon: url("public/icons/sparkle.svg"); }
+
+.timeline-svg-icon {
+  display: inline-flex;
+  width: 21px;
+  height: 21px;
+  background: var(--icon) center / contain no-repeat;
+}
+
+.icon-badge,
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(220, 234, 241, 0.4)),
+    rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 14px 28px rgba(15, 23, 42, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  font-size: 1.18rem;
+  line-height: 1;
+  transition:
+    transform var(--duration-fast) var(--motion-emphasis),
+    box-shadow var(--duration-fast) var(--motion-soft);
+}
+
+.emoji-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  gap: 8px;
+}
+
 .landing-hero {
   min-height: 100dvh;
   display: grid;
@@ -897,6 +1042,7 @@ body.is-ready .portfolio-hero::after {
 
 .landing-demo-badge {
   display: inline-flex;
+  gap: 8px;
   width: fit-content;
   align-items: center;
   padding: 9px 14px;
@@ -910,6 +1056,31 @@ body.is-ready .portfolio-hero::after {
   text-transform: uppercase;
 }
 
+@media (hover: hover) {
+  :is(
+    .section-header,
+    .block-header,
+    .artifact-heading,
+    .competitor-card-head,
+    .market-gap-card,
+    .chart-copy,
+    .refinement-copy,
+    .reflection-card,
+    .arch-box,
+    .method-card,
+    .alternative-card,
+    .pain-card
+  ):hover :is(h2, h3)::before,
+  .landing-module-link:hover strong::before,
+  .section-nav a:hover::after,
+  .desktop-top-nav a:hover::before {
+    transform: translateY(-2px) scale(1.04) rotate(-2deg);
+    box-shadow:
+      0 16px 30px rgba(15, 23, 42, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+}
+
 .landing-module-grid {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 20px;
@@ -920,7 +1091,9 @@ body.is-ready .portfolio-hero::after {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  display: block;
+  display: grid;
+  gap: 16px;
+  align-content: start;
   min-height: 104px;
   padding: 26px 28px;
   text-decoration: none;
@@ -933,6 +1106,10 @@ body.is-ready .portfolio-hero::after {
     box-shadow var(--duration-medium) var(--motion-soft),
     border-color var(--duration-medium) var(--motion-soft),
     background var(--duration-medium) var(--motion-soft);
+}
+
+.landing-module-link::marker {
+  content: "";
 }
 
 .landing-module-link strong {
@@ -1349,6 +1526,151 @@ body.is-ready .section.portfolio-section::after {
   align-items: start;
 }
 
+.block-header h2,
+.section-header h2,
+.artifact-heading h3,
+.competitor-card-head h3,
+.market-gap-card h3,
+.chart-copy h3,
+.refinement-copy h3,
+.reflection-card h3,
+.arch-box h3,
+.method-card h3,
+.alternative-card h3,
+.pain-card h3 {
+  overflow-wrap: anywhere;
+}
+
+.section-header h2::before,
+.block-header h2::before,
+.artifact-heading h3::before,
+.chart-copy h3::before,
+.refinement-copy h3::before,
+.reflection-card h3::before,
+.arch-box h3::before,
+.method-card h3::before,
+.alternative-card h3::before,
+.pain-card h3::before,
+.competitor-card-head h3::before,
+.market-gap-card h3::before {
+  content: "";
+  --icon: url("public/icons/pin.svg");
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 14px;
+  background:
+    var(--icon) center / 22px 22px no-repeat,
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(222, 235, 242, 0.68));
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  box-shadow:
+    0 14px 26px rgba(7, 15, 25, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.64);
+  font-family: var(--font-body);
+  font-size: 1.12rem;
+  line-height: 1;
+  vertical-align: middle;
+  text-shadow: none;
+  transition:
+    transform var(--duration-fast) var(--motion-emphasis),
+    box-shadow var(--duration-fast) var(--motion-soft);
+}
+
+#motivation-research .section-block:nth-of-type(1) .block-header h2::before {
+  --icon: url("public/icons/book.svg");
+}
+
+#motivation-research .section-block:nth-of-type(2) .block-header h2::before {
+  --icon: url("public/icons/warning.svg");
+}
+
+#motivation-research .section-block:nth-of-type(3) .block-header h2::before {
+  --icon: url("public/icons/book.svg");
+}
+
+#motivation-research .section-block:nth-of-type(4) .block-header h2::before {
+  --icon: url("public/icons/tool.svg");
+}
+
+#motivation-research .section-block:nth-of-type(5) .block-header h2::before {
+  --icon: url("public/icons/users.svg");
+}
+
+#user-requirements .section-header h2::before {
+  --icon: url("public/icons/users.svg");
+}
+
+#user-requirements .section-block:nth-of-type(1) .block-header h2::before {
+  --icon: url("public/icons/compass.svg");
+}
+
+#user-requirements .section-block:nth-of-type(2) .block-header h2::before {
+  --icon: url("public/icons/pin.svg");
+}
+
+#user-requirements .section-block:nth-of-type(3) .block-header h2::before {
+  --icon: url("public/icons/check.svg");
+}
+
+#user-requirements .section-block:nth-of-type(4) .block-header h2::before {
+  --icon: url("public/icons/document.svg");
+}
+
+#ideation-alternatives .section-header h2::before {
+  --icon: url("public/icons/design.svg");
+}
+
+#ideation-alternatives .section-block:nth-of-type(1) .block-header h2::before {
+  --icon: url("public/icons/pen.svg");
+}
+
+#ideation-alternatives .section-block:nth-of-type(2) .block-header h2::before {
+  --icon: url("public/icons/target.svg");
+}
+
+#ideation-alternatives .section-block:nth-of-type(3) .block-header h2::before {
+  --icon: url("public/icons/puzzle.svg");
+}
+
+#technical-implementation .section-header h2::before {
+  --icon: url("public/icons/code.svg");
+}
+
+#technical-implementation .block-header h2::before {
+  --icon: url("public/icons/tool.svg");
+}
+
+#evaluation-reflection .section-header h2::before {
+  --icon: url("public/icons/chart.svg");
+}
+
+#evaluation-reflection .section-block:nth-of-type(1) .block-header h2::before {
+  --icon: url("public/icons/link.svg");
+}
+
+#evaluation-reflection .section-block:nth-of-type(2) .block-header h2::before {
+  --icon: url("public/icons/test.svg");
+}
+
+#evaluation-reflection .section-block:nth-of-type(3) .block-header h2::before {
+  --icon: url("public/icons/tool.svg");
+}
+
+#evaluation-reflection .section-block:nth-of-type(4) .block-header h2::before {
+  --icon: url("public/icons/shield.svg");
+}
+
+#evaluation-reflection .section-block:nth-of-type(5) .block-header h2::before {
+  --icon: url("public/icons/users.svg");
+}
+
+#evaluation-reflection .section-block:nth-of-type(6) .block-header h2::before {
+  --icon: url("public/icons/book.svg");
+}
+
 .context-layout,
 .implementation-shell,
 .evaluation-grid,
@@ -1543,6 +1865,94 @@ body.is-ready .section.portfolio-section::after {
   color: var(--ink);
 }
 
+#motivation-research .pain-card:nth-child(1) h3::before {
+  --icon: url("public/icons/warning.svg");
+}
+
+#motivation-research .pain-card:nth-child(2) h3::before {
+  --icon: url("public/icons/chart.svg");
+}
+
+#motivation-research .pain-card:nth-child(3) h3::before {
+  --icon: url("public/icons/idea.svg");
+}
+
+#motivation-research .pain-card:nth-child(4) h3::before {
+  --icon: url("public/icons/chat.svg");
+}
+
+#user-requirements .method-card:nth-child(1) h3::before {
+  --icon: url("public/icons/map.svg");
+}
+
+#user-requirements .method-card:nth-child(2) h3::before {
+  --icon: url("public/icons/game.svg");
+}
+
+#user-requirements .method-card:nth-child(3) h3::before {
+  --icon: url("public/icons/link.svg");
+}
+
+#ideation-alternatives .alternative-card:nth-child(1) h3::before {
+  --icon: url("public/icons/check.svg");
+}
+
+#ideation-alternatives .alternative-card:nth-child(2) h3::before {
+  --icon: url("public/icons/map.svg");
+}
+
+#ideation-alternatives .alternative-card:nth-child(3) h3::before {
+  --icon: url("public/icons/chat.svg");
+}
+
+#technical-implementation .arch-box:nth-child(1) h3::before {
+  --icon: url("public/icons/book.svg");
+}
+
+#technical-implementation .arch-box:nth-child(2) h3::before {
+  --icon: url("public/icons/puzzle.svg");
+}
+
+#technical-implementation .arch-box:nth-child(3) h3::before {
+  --icon: url("public/icons/image.svg");
+}
+
+#technical-implementation .data-handling-flow .arch-box:nth-child(1) h3::before {
+  --icon: url("public/icons/game.svg");
+}
+
+#technical-implementation .data-handling-flow .arch-box:nth-child(2) h3::before {
+  --icon: url("public/icons/chart.svg");
+}
+
+#technical-implementation .data-handling-flow .arch-box:nth-child(3) h3::before {
+  --icon: url("public/icons/teacher.svg");
+}
+
+#evaluation-reflection .chart-analysis-card:nth-child(1) .chart-copy h3::before {
+  --icon: url("public/icons/pin.svg");
+}
+
+#evaluation-reflection .chart-analysis-card:nth-child(2) .chart-copy h3::before {
+  --icon: url("public/icons/document.svg");
+}
+
+#evaluation-reflection .refinement-copy h3::before {
+  --icon: url("public/icons/tool.svg");
+}
+
+#evaluation-reflection .reflection-card:nth-child(1) h3::before {
+  --icon: url("public/icons/sparkle.svg");
+}
+
+#evaluation-reflection .reflection-card:nth-child(2) h3::before {
+  --icon: url("public/icons/reflect.svg");
+}
+
+#evaluation-reflection .reflection-card:nth-child(3) h3::before {
+  --icon: url("public/icons/shield.svg");
+}
+
 .literature-stack {
   display: grid;
   gap: 22px;
@@ -1644,6 +2054,60 @@ body.is-ready .section.portfolio-section::after {
   letter-spacing: -0.03em;
   color: var(--ink);
   font-weight: 700;
+}
+
+.theme-title::before,
+.detail-label::before,
+.mini-label::before,
+.paper-label::before,
+.visual-label::before,
+.artifact-tag::before,
+.source-chip::before,
+.persona-chip::before {
+  content: "";
+  --icon: url("public/icons/pin.svg");
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 7px;
+  background: var(--icon) center / contain no-repeat;
+  font-family: var(--font-body);
+  letter-spacing: 0;
+  vertical-align: -0.14em;
+}
+
+#user-requirements .theme-title::before {
+  --icon: url("public/icons/check.svg");
+}
+
+#user-requirements .requirement-detail .detail-label::before {
+  --icon: url("public/icons/check.svg");
+}
+
+#user-requirements .chart-copy .mini-label::before,
+#evaluation-reflection .chart-copy .mini-label::before {
+  --icon: url("public/icons/pin.svg");
+}
+
+#motivation-research .visual-label::before {
+  --icon: url("public/icons/users.svg");
+}
+
+#motivation-research .secondary-label::before {
+  --icon: url("public/icons/teacher.svg");
+}
+
+#motivation-research .persona-chip::before {
+  --icon: url("public/icons/idea.svg");
+}
+
+#ideation-alternatives .artifact-tag::before,
+#technical-implementation .artifact-tag::before {
+  --icon: url("public/icons/puzzle.svg");
+}
+
+#user-requirements .source-chip::before {
+  --icon: url("public/icons/pin.svg");
 }
 
 .paper-stack {
@@ -1878,6 +2342,38 @@ body.is-ready .section.portfolio-section::after {
   color: var(--ink);
 }
 
+.competitor-card-head h3::before {
+  --icon: url("public/icons/tool.svg");
+}
+
+.competitor-panel:nth-child(1) h4::before {
+  --icon: url("public/icons/pin.svg");
+}
+
+.competitor-panel:nth-child(2) h4::before {
+  --icon: url("public/icons/link.svg");
+}
+
+.competitor-panel:nth-child(3) h4::before {
+  --icon: url("public/icons/puzzle.svg");
+}
+
+.competitor-panel:nth-child(4) h4::before {
+  --icon: url("public/icons/check.svg");
+}
+
+.competitor-panel:nth-child(5) h4::before {
+  --icon: url("public/icons/warning.svg");
+}
+
+.competitor-panel.relevance-panel h4::before {
+  --icon: url("public/icons/idea.svg");
+}
+
+.market-gap-card h3::before {
+  --icon: url("public/icons/warning.svg");
+}
+
 .case-step-list,
 .case-bullet-list,
 .case-point-list,
@@ -2036,6 +2532,21 @@ body.is-ready .section.portfolio-section::after {
 
 .journey-figure {
   padding: 24px;
+}
+
+.journey-figure::before {
+  content: "Discover · Plan · Explore · Prepare · Apply · Reflect";
+  align-self: stretch;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(143, 216, 232, 0.14), rgba(247, 200, 106, 0.1)),
+    rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(143, 216, 232, 0.24);
+  color: var(--portfolio-body, var(--muted-strong));
+  font-weight: 800;
+  line-height: 1.8;
+  text-align: center;
 }
 
 .requirement-cluster-grid {
@@ -2312,6 +2823,79 @@ body.is-ready .section.portfolio-section::after {
 .prototype-stack {
   display: grid;
   gap: 20px;
+}
+
+#technical-implementation .prototype-card .artifact-heading::before,
+#technical-implementation .link-placeholder-card .mini-label::before,
+#ideation-alternatives .prototype-card .artifact-heading::before,
+#ideation-alternatives .link-placeholder-card .mini-label::before,
+#evaluation-reflection .comparison-panel figcaption::before,
+#user-requirements .evidence-caption::before {
+  content: "";
+  --icon: url("public/icons/pin.svg");
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-right: 9px;
+  border-radius: 12px;
+  background:
+    var(--icon) center / 19px 19px no-repeat,
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(222, 235, 242, 0.66));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  box-shadow: 0 10px 20px rgba(7, 15, 25, 0.12);
+  font-family: var(--font-body);
+  font-size: 1.12rem;
+  line-height: 1;
+}
+
+#technical-implementation .prototype-card .artifact-heading::before {
+  --icon: url("public/icons/map.svg");
+}
+
+#technical-implementation .link-placeholder-card .mini-label::before {
+  --icon: url("public/icons/rocket.svg");
+}
+
+#ideation-alternatives .prototype-card .artifact-heading::before {
+  --icon: url("public/icons/puzzle.svg");
+}
+
+#ideation-alternatives .link-placeholder-card .mini-label::before {
+  --icon: url("public/icons/link.svg");
+}
+
+#evaluation-reflection .comparison-panel:first-child figcaption::before {
+  --icon: url("public/icons/warning.svg");
+}
+
+#evaluation-reflection .comparison-panel:last-child figcaption::before {
+  --icon: url("public/icons/sparkle.svg");
+}
+
+#user-requirements .evidence-card:nth-child(1) .evidence-caption::before {
+  --icon: url("public/icons/chat.svg");
+}
+
+#user-requirements .evidence-card:nth-child(2) .evidence-caption::before {
+  --icon: url("public/icons/users.svg");
+}
+
+#user-requirements .evidence-card:nth-child(3) .evidence-caption::before {
+  --icon: url("public/icons/test.svg");
+}
+
+#user-requirements .evidence-card:nth-child(4) .evidence-caption::before {
+  --icon: url("public/icons/shield.svg");
+}
+
+#user-requirements .evidence-card:nth-child(5) .evidence-caption::before {
+  --icon: url("public/icons/document.svg");
+}
+
+#user-requirements .evidence-card:nth-child(6) .evidence-caption::before {
+  --icon: url("public/icons/video.svg");
 }
 
 .prototype-card figcaption {
@@ -2732,6 +3316,56 @@ code {
   font-weight: 800;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+}
+
+.matrix-table thead th::before,
+.competitor-panel h4::before {
+  content: "";
+  --icon: url("public/icons/pin.svg");
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 7px;
+  background: var(--icon) center / contain no-repeat;
+  font-family: var(--font-body);
+  letter-spacing: 0;
+  vertical-align: -0.15em;
+}
+
+.literature-matrix-table thead th:nth-child(1)::before {
+  --icon: url("public/icons/book.svg");
+}
+
+.literature-matrix-table thead th:nth-child(2)::before {
+  --icon: url("public/icons/document.svg");
+}
+
+.literature-matrix-table thead th:nth-child(3)::before {
+  --icon: url("public/icons/check.svg");
+}
+
+.literature-matrix-table thead th:nth-child(4)::before {
+  --icon: url("public/icons/warning.svg");
+}
+
+.literature-matrix-table thead th:nth-child(5)::before {
+  --icon: url("public/icons/idea.svg");
+}
+
+.alignment-table thead th:nth-child(1)::before {
+  --icon: url("public/icons/check.svg");
+}
+
+.alignment-table thead th:nth-child(2)::before {
+  --icon: url("public/icons/target.svg");
+}
+
+.alignment-table thead th:nth-child(3)::before {
+  --icon: url("public/icons/puzzle.svg");
+}
+
+.alignment-table thead th:nth-child(4)::before {
+  --icon: url("public/icons/pin.svg");
 }
 
 .matrix-table tbody tr:nth-child(even) {
@@ -3166,6 +3800,14 @@ code {
       transform var(--duration-medium) var(--motion-emphasis);
   }
 
+  .desktop-top-nav a::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    font-size: 0.78rem;
+    background: rgba(255, 255, 255, 0.16);
+  }
+
   .desktop-top-nav a::after {
     content: "";
     position: absolute;
@@ -3379,6 +4021,31 @@ code {
   .section-header h2,
   .block-header h2 {
     font-size: 2rem;
+  }
+
+  .section-header h2::before,
+  .block-header h2::before,
+  .artifact-heading h3::before,
+  .chart-copy h3::before,
+  .refinement-copy h3::before,
+  .reflection-card h3::before,
+  .arch-box h3::before,
+  .method-card h3::before,
+  .alternative-card h3::before,
+  .pain-card h3::before,
+  .competitor-card-head h3::before,
+  .market-gap-card h3::before,
+  .landing-module-link strong::before {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    margin-right: 8px;
+    font-size: 1rem;
+  }
+
+  .journey-figure::before {
+    font-size: 0.9rem;
+    text-align: left;
   }
 
   .case-link {
