@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline | Journey RPG Process Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+          rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="site.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* 确保 Tailwind 和你原本的样式库字体统一 */
+    body { font-family: 'Manrope', sans-serif; }
+
+    /* 魔法标题与徽章专属字体 */
+    .magic-title, .week-badge { font-family: 'Cormorant Garamond', serif; }
+    h3 { font-family: 'Space Grotesk', sans-serif; }
+
+    /* 亮色魔法节点动画 (白天的金色发光效果) */
+    .magic-node-light {
+      background: radial-gradient(circle, #fff 0%, #fbbf24 40%, #d97706 100%);
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.4), 0 0 10px rgba(251, 191, 36, 0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .group:hover .magic-node-light {
+      transform: translate(-50%, 0) scale(1.2);
+      box-shadow: 0 0 20px #fff, 0 0 30px rgba(245, 158, 11, 0.6);
+      border-color: #fff;
+    }
+
+    /* 金色魔法线 */
+    .magic-line-light {
+      background: linear-gradient(to bottom, transparent, #fbbf24 10%, #d97706 90%, transparent);
+      width: 3px;
+      filter: drop-shadow(0 0 6px rgba(245,158,11,0.4));
+    }
+
+    /* 羊皮纸/白魔法 卡片质感 */
+    .magic-card-light {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
+    }
+    .group:hover .magic-card-light {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #fbbf24;
+      box-shadow: 0 15px 40px rgba(245, 158, 11, 0.15);
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+
+<body class="page-module page-timeline bg-gray-50 antialiased overflow-x-hidden">
+
+<header class="topbar">
+  <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="site-drawer"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="drawer-backdrop" hidden data-drawer-close></div>
+  <nav class="desktop-top-nav" aria-label="Simplified desktop navigation">
+    <a href="index.html">Home</a>
+    <a href="project-timeline.html" aria-current="page">Timeline</a>
+    <a href="motivation-research.html">Research</a>
+    <a href="user-requirements.html">Requirements</a>
+    <a href="ideation-alternatives.html">Ideation</a>
+    <a href="technical-implementation.html">Implementation</a>
+    <a href="evaluation-reflection.html">Evaluation</a>
+    <a href="http://47.114.99.88/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+  </nav>
+  <div class="topbar-shell">
+    <aside class="site-drawer" id="site-drawer">
+      <div class="drawer-head">
+        <a class="brand" href="index.html" aria-label="Journey RPG home">
+          <span class="brand-mark">CPT208</span>
+          <span class="brand-copy">
+              <strong>Journey RPG</strong>
+              <small>Official Process Portfolio</small>
+            </span>
+        </a>
+
+        <button
+                class="sidebar-toggle"
+                type="button"
+                aria-label="Hide navigation"
+                aria-expanded="true"
+        >
+          <span class="sidebar-toggle-label">Hide</span>
+        </button>
+      </div>
+
+      <nav class="section-nav" aria-label="Process portfolio navigation">
+        <a href="index.html">Portfolio Home</a>
+        <a href="project-timeline.html" aria-current="page">Project Timeline</a>
+        <a href="motivation-research.html">Motivation &amp; Research</a>
+        <a href="user-requirements.html">User Requirements</a>
+        <a href="ideation-alternatives.html">Ideation &amp; Alternatives</a>
+        <a href="technical-implementation.html">Technical Implementation</a>
+        <a href="evaluation-reflection.html">Evaluation &amp; Reflection</a>
+        <a
+                class="nav-link-accent"
+                href="http://47.114.99.88/"
+                target="_blank"
+                rel="noopener noreferrer"
+        >
+          Live Program
+        </a>
+      </nav>
+    </aside>
+  </div>
+</header>
+
+<main>
+
+  <section class="max-w-6xl mx-auto px-4 py-24 relative overflow-hidden mt-10">
+
+    <div class="absolute top-[-5%] left-1/2 -translate-x-1/2 w-full max-w-3xl h-[600px] bg-gradient-to-b from-amber-200/20 to-transparent blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="text-center mb-24 relative">
+      <p class="text-amber-600 font-bold tracking-widest uppercase text-sm mb-4">Project Timeline</p>
+      <h2 class="magic-title text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-indigo-950 via-teal-900 to-amber-700 drop-shadow-sm pb-2">
+        A Granular HCI Design Process
+      </h2>
+      <div class="h-1 w-32 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mt-6"></div>
+    </div>
+
+    <div class="relative">
+      <div class="absolute left-6 md:left-1/2 top-0 bottom-0 magic-line-light transform md:-translate-x-1/2 rounded-full opacity-80"></div>
+
+      <div class="flex justify-start md:justify-center mb-16 relative w-full z-10">
+            <span class="week-badge bg-indigo-950 text-amber-200 font-bold px-10 py-3 rounded-sm text-2xl tracking-widest border-x-2 border-amber-400 shadow-[0_10px_20px_rgba(15,23,42,0.15)] italic">
+              Week 2: Topic Confirmation
+            </span>
+      </div>
+
+      <div class="mb-20 flex justify-start w-full relative group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">📜</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pr-16 lg:pr-24">
+          <div class="magic-card-light p-8 rounded-tr-3xl rounded-bl-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Concept Definition</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Confirmed the topic as "EduMap Journey," aiming to transform the anxiety-inducing postgraduate application process into an engaging, RPG-style interactive learning pathway.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-start md:justify-center mb-16 relative w-full z-10 mt-24">
+            <span class="week-badge bg-indigo-950 text-amber-200 font-bold px-10 py-3 rounded-sm text-2xl tracking-widest border-x-2 border-amber-400 shadow-[0_10px_20px_rgba(15,23,42,0.15)] italic">
+              Week 3: Mixed-Methods Research
+            </span>
+      </div>
+
+      <div class="mb-14 flex justify-start w-full relative md:justify-end group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">🗣️</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pl-16 lg:pl-24">
+          <div class="magic-card-light p-8 rounded-tl-3xl rounded-br-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Qualitative Interviews</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Interviewed potential study abroad students and academic advisors to uncover deeper psychological pain points regarding school comparison, deadline anxiety, and motivation drop-offs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-20 flex justify-start w-full relative group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">📊</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pr-16 lg:pr-24">
+          <div class="magic-card-light p-8 rounded-tr-3xl rounded-bl-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Quantitative Questionnaire</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Distributed a targeted survey (total n=44) to statistically validate issues like information overload, and to measure user acceptance of game-based metaphorical guidance.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-start md:justify-center mb-16 relative w-full z-10 mt-24">
+            <span class="week-badge bg-indigo-950 text-amber-200 font-bold px-10 py-3 rounded-sm text-2xl tracking-widest border-x-2 border-amber-400 shadow-[0_10px_20px_rgba(15,23,42,0.15)] italic">
+              Week 4: Synthesis & Empathy Mapping
+            </span>
+      </div>
+
+      <div class="mb-14 flex justify-start w-full relative md:justify-end group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">🎭</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pl-16 lg:pl-24">
+          <div class="magic-card-light p-8 rounded-tl-3xl rounded-br-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Persona Development</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Created dual-stakeholder Personas representing both the overwhelmed student needing staged guidance and the academic advisor requiring centralized tracking.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-14 flex justify-start w-full relative group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">🧭</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pr-16 lg:pr-24">
+          <div class="magic-card-light p-8 rounded-tr-3xl rounded-bl-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">User Journey Mapping</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Mapped the end-to-end emotional and practical student journey, pinpointing the critical transition from early-stage "Goal Confusion" to late-stage "Execution Stress."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-20 flex justify-start w-full relative md:justify-end group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">📚</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pl-16 lg:pl-24">
+          <div class="magic-card-light p-8 rounded-tl-3xl rounded-br-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Literature & Product Research</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Analyzed 4 academic papers and 4 commercial products to identify "The Gap," structuring findings into a strict 3 Pros & 3 Cons matrix to justify our gamified approach.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-start md:justify-center mb-16 relative w-full z-10 mt-24">
+            <span class="week-badge bg-indigo-950 text-amber-200 font-bold px-10 py-3 rounded-sm text-2xl tracking-widest border-x-2 border-amber-400 shadow-[0_10px_20px_rgba(15,23,42,0.15)] italic">
+              Week 5: Ideation & Prototyping
+            </span>
+      </div>
+
+      <div class="mb-14 flex justify-start w-full relative group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">🎯</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pr-16 lg:pr-24">
+          <div class="magic-card-light p-8 rounded-tr-3xl rounded-bl-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Requirement Analysis</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Translated research insights into a Core Alignment matrix (Requirement ➔ Design Goal ➔ Feature) and explicitly defined the 3 "Playful Must-Haves" for system engagement.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-20 flex justify-start w-full relative md:justify-end group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">🪄</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pl-16 lg:pl-24">
+          <div class="magic-card-light p-8 rounded-tl-3xl rounded-br-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Ideation & Low-fi Design</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Conducted "Crazy 8s" rapid sketching to explore UI metaphors, followed by creating clickable Low-Fi wireframes in Figma for the "Star-map" navigation and "Alchemy Crafting" stages.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-start md:justify-center mb-16 relative w-full z-10 mt-24">
+            <span class="week-badge bg-indigo-950 text-amber-200 font-bold px-10 py-3 rounded-sm text-2xl tracking-widest border-x-2 border-amber-400 shadow-[0_10px_20px_rgba(15,23,42,0.15)] italic">
+              Week 5–8: System Development
+            </span>
+      </div>
+
+      <div class="mb-14 flex justify-start w-full relative group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">🏗️</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pr-16 lg:pr-24">
+          <div class="magic-card-light p-8 rounded-tr-3xl rounded-bl-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">High-Fi Demo Implementation</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Built the decoupled full-stack web demo (Vue 3 + Spring Boot) featuring stage-based gameplay, interactive progress tracking, and bilingual content delivery.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-20 flex justify-start w-full relative md:justify-end group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">⚡</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pl-16 lg:pl-24">
+          <div class="magic-card-light p-8 rounded-tl-3xl rounded-br-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">AI Vibe Coding Process</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Leveraged AI-assisted development (Cursor/ChatGPT) to accelerate frontend layout iterations, CSS styling, and data-state debugging, combined with strict manual code reviews.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-start md:justify-center mb-16 relative w-full z-10 mt-24">
+            <span class="week-badge bg-indigo-950 text-amber-200 font-bold px-10 py-3 rounded-sm text-2xl tracking-widest border-x-2 border-amber-400 shadow-[0_10px_20px_rgba(15,23,42,0.15)] italic">
+              Week 8: User Evaluation
+            </span>
+      </div>
+
+      <div class="mb-20 flex justify-start w-full relative group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">🛡️</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pr-16 lg:pr-24">
+          <div class="magic-card-light p-8 rounded-tr-3xl rounded-bl-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Alpha Usability Testing</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Conducted formal usability testing on the deployed demo with 3 real target users. Collected both qualitative confusion points and quantitative UEQ metrics (Attractiveness, Pragmatic, and Hedonic qualities).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-start md:justify-center mb-16 relative w-full z-10 mt-24">
+            <span class="week-badge bg-indigo-950 text-amber-200 font-bold px-10 py-3 rounded-sm text-2xl tracking-widest border-x-2 border-amber-400 shadow-[0_10px_20px_rgba(15,23,42,0.15)] italic">
+              Week 9–10: Refinement & Delivery
+            </span>
+      </div>
+
+      <div class="mb-14 flex justify-start w-full relative md:justify-end group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">🛠️</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pl-16 lg:pl-24">
+          <div class="magic-card-light p-8 rounded-tl-3xl rounded-br-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Iterative Refinement</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Executed concrete UI/UX shifts based on the feedback log: upgraded vague system tags to concrete academic metrics (Shift 1) and replaced weak notifications with actionable milestone modals (Shift 2).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-14 flex justify-start w-full relative group">
+        <div class="absolute left-6 md:left-1/2 w-10 h-10 magic-node-light rounded-full border-2 border-white/80 transform -translate-x-1/2 mt-6 z-20 flex items-center justify-center text-xl">🏆</div>
+        <div class="w-full pl-20 md:pl-0 md:w-1/2 md:pr-16 lg:pr-24">
+          <div class="magic-card-light p-8 rounded-tr-3xl rounded-bl-3xl">
+            <h3 class="text-2xl font-bold text-amber-600 mb-4 tracking-wide group-hover:text-amber-500 transition-colors">Final Demo & Deployment</h3>
+            <p class="text-stone-600 text-base leading-relaxed group-hover:text-stone-800 transition-colors">Finalized the live deployment on Alibaba Cloud, compiled the comprehensive HCI Process Portfolio, and produced the demo video showcasing the complete user-centric evidence chain.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Journey RPG | CPT208 Human-Centric Computing Process Portfolio</p>
+  </div>
+</footer>
+</body>
+</html>

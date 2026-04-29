@@ -911,7 +911,7 @@ body.is-ready .portfolio-hero::after {
 }
 
 .landing-module-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 20px;
   perspective: 1400px;
 }
@@ -1099,6 +1099,10 @@ html.js-motion body.page-home.is-ready .landing-module-link:nth-child(4) {
 
 html.js-motion body.page-home.is-ready .landing-module-link:nth-child(5) {
   transition-delay: 740ms;
+}
+
+html.js-motion body.page-home.is-ready .landing-module-link:nth-child(6) {
+  transition-delay: 820ms;
 }
 
 html.js-motion body.page-home.is-ready .landing-hero::before {
@@ -1294,6 +1298,16 @@ body.is-ready .section.portfolio-section::after {
   color: var(--muted);
 }
 
+.section.portfolio-section > .container > .section-block > .block-header .block-kicker {
+  color: var(--hero-subtitle);
+  text-shadow: 0 6px 20px rgba(7, 16, 28, 0.22);
+}
+
+.section.portfolio-section > .container > .section-block > .block-header h2 {
+  color: #f6fbff;
+  text-shadow: 0 8px 24px rgba(7, 16, 28, 0.34);
+}
+
 .portfolio-hero .block-kicker,
 .portfolio-hero .block-header h2 {
   color: #ffffff;
@@ -1355,6 +1369,110 @@ body.is-ready .section.portfolio-section::after {
   background: var(--highlight-soft);
   color: #8a5b00;
   font-weight: 800;
+}
+
+.timeline-shell {
+  position: relative;
+  display: grid;
+  gap: 28px;
+  padding: 6px 0 10px;
+}
+
+.timeline-shell::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 132px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--highlight) 0%, var(--accent) 100%);
+  opacity: 0.7;
+}
+
+.timeline-week {
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.timeline-week::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 126px;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  border: 3px solid #ffffff;
+  border-radius: 999px;
+  background: var(--highlight);
+  box-shadow: 0 8px 18px rgba(7, 16, 28, 0.22);
+}
+
+.timeline-week-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(15, 31, 47, 0.92);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  box-shadow: 0 14px 26px rgba(7, 16, 28, 0.16);
+}
+
+.timeline-items {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline-card {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  min-height: 118px;
+  padding-left: 82px;
+}
+
+.surface-card.timeline-card {
+  padding-left: 82px;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 26px;
+  left: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--highlight) 100%);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(20, 116, 111, 0.18);
+}
+
+.timeline-card h3 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.18;
+}
+
+.timeline-card p {
+  color: var(--muted-strong);
 }
 
 .narrative-card p + p,
@@ -2971,7 +3089,7 @@ code {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: min(900px, calc(100vw - 96px));
+    width: min(1040px, calc(100vw - 96px));
     min-height: 58px;
     padding: 9px 12px;
     border: 1px solid rgba(255, 255, 255, 0.24);
@@ -3127,7 +3245,7 @@ code {
 
 @media (min-width: 1024px) and (max-width: 1120px) and (min-height: 620px) and (hover: hover) and (pointer: fine) {
   .desktop-top-nav {
-    width: min(760px, calc(100vw - 86px));
+    width: min(940px, calc(100vw - 86px));
     gap: 5px;
   }
 
@@ -3211,6 +3329,36 @@ code {
 
   .landing-module-grid {
     grid-template-columns: 1fr;
+  }
+
+  .timeline-shell {
+    gap: 22px;
+  }
+
+  .timeline-shell::before,
+  .timeline-week::before {
+    display: none;
+  }
+
+  .timeline-week {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .timeline-week-label {
+    justify-self: start;
+    min-height: 38px;
+    font-size: 0.86rem;
+  }
+
+  .surface-card.timeline-card {
+    min-height: 0;
+    padding: 22px 20px 22px 76px;
+  }
+
+  .timeline-marker {
+    top: 22px;
+    left: 20px;
   }
 
   .section {
@@ -3328,4 +3476,362 @@ code {
     transform: none !important;
     filter: none !important;
   }
+}
+
+/* Portfolio readability unification: adapted from XinlanWu21's 3d298cc design pass. */
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) {
+  --portfolio-card-bg: linear-gradient(180deg, rgba(13, 27, 42, 0.84), rgba(10, 24, 38, 0.76));
+  --portfolio-card-bg-strong: linear-gradient(180deg, rgba(12, 28, 43, 0.94), rgba(9, 22, 35, 0.9));
+  --portfolio-card-border: rgba(214, 234, 246, 0.18);
+  --portfolio-card-border-strong: rgba(92, 186, 202, 0.34);
+  --portfolio-heading: #f7fbff;
+  --portfolio-body: #dbe9f3;
+  --portfolio-muted: #b7cadd;
+  --portfolio-link: #8fd8e8;
+  --portfolio-highlight: #f7c86a;
+}
+
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .section-header h2,
+  .block-header h2,
+  .surface-card h3,
+  .theme-title
+) {
+  color: var(--portfolio-heading);
+  letter-spacing: 0;
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  p,
+  li,
+  figcaption
+) {
+  color: var(--portfolio-body);
+}
+
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .block-lead,
+  .section-lead,
+  .alternative-summary,
+  .figma-url,
+  .reference-list
+) {
+  color: var(--portfolio-muted);
+}
+
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .surface-card,
+  .section-block-light,
+  .requirement-cluster,
+  .requirement-detail,
+  .detail-card,
+  .ideation-card,
+  .alternative-card,
+  .prototype-card,
+  .link-placeholder-card,
+  .narrative-card,
+  .reflection-card,
+  .chart-analysis-card,
+  .refinement-placeholder,
+  .contribution-wrap,
+  .reference-card,
+  .matrix-table-wrap
+) {
+  background: var(--portfolio-card-bg);
+  border: 1px solid var(--portfolio-card-border);
+  box-shadow:
+    0 22px 52px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(135%);
+}
+
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) .section-block > .block-header {
+  padding: 20px 22px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(16, 40, 60, 0.72), rgba(9, 22, 35, 0.48));
+  border: 1px solid rgba(214, 234, 246, 0.16);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(16px) saturate(130%);
+}
+
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .block-kicker,
+  .section-kicker,
+  .mini-label,
+  .detail-label
+) {
+  color: var(--portfolio-highlight);
+  letter-spacing: 0.06em;
+}
+
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) :is(
+  .source-chip,
+  .question-chip,
+  .artifact-tag,
+  .visual-label
+) {
+  background: rgba(143, 216, 232, 0.14);
+  color: #dff8ff;
+  border: 1px solid rgba(143, 216, 232, 0.34);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+#user-requirements .requirement-cluster,
+#ideation-alternatives .selected,
+#evaluation-reflection .reflection-card {
+  border-color: var(--portfolio-card-border-strong);
+  background:
+    linear-gradient(180deg, rgba(20, 116, 111, 0.22), rgba(12, 28, 43, 0.86)),
+    var(--portfolio-card-bg-strong);
+}
+
+:is(
+  #user-requirements .requirement-detail,
+  #user-requirements .detail-card,
+  #ideation-alternatives .sketch-cell,
+  #ideation-alternatives .url-placeholder,
+  #evaluation-reflection .comparison-panel
+) {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(214, 234, 246, 0.16);
+}
+
+#ideation-alternatives .crazy8-board,
+#user-requirements .visual-card {
+  background: rgba(9, 22, 35, 0.74);
+}
+
+:is(
+  #ideation-alternatives .sketch-cell figcaption,
+  #ideation-alternatives .prototype-card figcaption,
+  #evaluation-reflection .comparison-panel figcaption,
+  #user-requirements .evidence-caption
+) {
+  color: var(--portfolio-muted);
+}
+
+#ideation-alternatives .alternative-label {
+  background: rgba(143, 216, 232, 0.13);
+  color: #e8fbff;
+  border: 1px solid rgba(143, 216, 232, 0.26);
+}
+
+#ideation-alternatives .selected-label {
+  background: linear-gradient(135deg, #2f9faa, #f0b84f);
+  color: #07101b;
+  border-color: rgba(255, 255, 255, 0.26);
+}
+
+#ideation-alternatives .decision-banner,
+#user-requirements .synthesis-banner {
+  border: 1px solid rgba(143, 216, 232, 0.28);
+  background:
+    linear-gradient(135deg, rgba(20, 116, 111, 0.78), rgba(13, 27, 42, 0.96)),
+    #0d1b2a;
+}
+
+#ideation-alternatives .figma-link,
+#evaluation-reflection .reference-list a {
+  color: #07101b;
+  background: linear-gradient(135deg, #9fe7f0, #f7c86a);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+#evaluation-reflection .reference-list a {
+  display: inline;
+  padding: 0 4px;
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+#user-requirements .chart-media,
+#ideation-alternatives .prototype-placeholder,
+#evaluation-reflection .chart-media {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+#evaluation-reflection .matrix-table-wrap,
+#evaluation-reflection .contribution-wrap {
+  border-radius: var(--radius-xl);
+}
+
+#evaluation-reflection :is(.matrix-table, .alignment-table, .contribution-table) {
+  color: var(--portfolio-body);
+}
+
+#evaluation-reflection :is(.matrix-table th, .matrix-table td, .contribution-table th, .contribution-table td) {
+  border-bottom: 1px solid rgba(214, 234, 246, 0.13);
+  color: var(--portfolio-body);
+}
+
+#evaluation-reflection :is(.matrix-table thead th, .contribution-table thead th) {
+  background: linear-gradient(180deg, rgba(37, 95, 116, 0.96), rgba(14, 47, 66, 0.96));
+  color: #f8fcff;
+  border-bottom-color: rgba(143, 216, 232, 0.3);
+}
+
+#evaluation-reflection :is(.matrix-table td strong, .contribution-table .member-cell) {
+  color: #ffffff;
+}
+
+#evaluation-reflection :is(.matrix-table tbody tr:nth-child(even), .contribution-table tbody tr:nth-child(even)) {
+  background: rgba(255, 255, 255, 0.045);
+}
+
+#evaluation-reflection :is(.matrix-table tbody tr:hover, .contribution-table tbody tr:hover) {
+  background: rgba(143, 216, 232, 0.09);
+}
+
+#evaluation-reflection .table-portrait {
+  border-color: rgba(214, 234, 246, 0.22);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.22);
+}
+
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) .bullet-list li {
+  color: var(--portfolio-body);
+}
+
+:is(#user-requirements, #ideation-alternatives, #evaluation-reflection, #project-timeline) a {
+  color: var(--portfolio-link);
+}
+
+#project-timeline .timeline-shell::before {
+  background: linear-gradient(180deg, rgba(247, 200, 106, 0.95), rgba(143, 216, 232, 0.86));
+}
+
+#project-timeline .timeline-week::before {
+  background: var(--portfolio-highlight);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+#project-timeline .timeline-week-label {
+  background: linear-gradient(135deg, rgba(16, 40, 60, 0.96), rgba(9, 22, 35, 0.9));
+  color: var(--portfolio-highlight);
+  border: 1px solid rgba(247, 200, 106, 0.3);
+}
+
+#project-timeline .timeline-card {
+  border-color: var(--portfolio-card-border);
+}
+
+#project-timeline .timeline-marker {
+  background: linear-gradient(135deg, #2f9faa, #f0b84f);
+  color: #07101b;
+}
+
+body.page-timeline {
+  --portfolio-card-border: rgba(214, 234, 246, 0.18);
+  --portfolio-card-border-strong: rgba(92, 186, 202, 0.34);
+  --portfolio-heading: #f7fbff;
+  --portfolio-body: #dbe9f3;
+  --portfolio-highlight: #f7c86a;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(245, 158, 11, 0.1), transparent 22%),
+    radial-gradient(circle at 82% 10%, rgba(143, 216, 232, 0.12), transparent 26%),
+    linear-gradient(180deg, #0d1b2a 0%, #10283c 34%, #0a1826 100%),
+    var(--hero-bg);
+}
+
+body.page-timeline main {
+  position: relative;
+  isolation: isolate;
+  min-height: 100dvh;
+}
+
+body.page-timeline main > section {
+  margin-top: 0;
+  padding-top: clamp(92px, 10vh, 124px);
+}
+
+body.page-timeline main::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: clamp(380px, 52vh, 640px);
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(180deg, rgba(7, 16, 28, 0.14) 0%, rgba(7, 16, 28, 0.22) 84%, rgba(7, 16, 28, 0.86) 100%),
+    url("background.png");
+  background-size: cover;
+  background-position: center, center 26%;
+  background-repeat: no-repeat;
+  transform: scale(1.01);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
+}
+
+body.page-timeline .magic-title {
+  background-image: linear-gradient(180deg, #ffffff 0%, #eaf4fb 48%, #f7c86a 100%);
+  text-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+}
+
+body.page-timeline main section > .text-center p {
+  color: var(--portfolio-highlight);
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+body.page-timeline .week-badge {
+  color: var(--portfolio-highlight);
+  background: linear-gradient(135deg, rgba(16, 40, 60, 0.92), rgba(9, 22, 35, 0.76));
+  border-color: rgba(247, 200, 106, 0.56);
+  border-radius: 14px;
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px) saturate(130%);
+}
+
+body.page-timeline .magic-line-light {
+  background: linear-gradient(to bottom, transparent, rgba(247, 200, 106, 0.92) 10%, rgba(143, 216, 232, 0.78) 90%, transparent);
+  filter: drop-shadow(0 0 10px rgba(143, 216, 232, 0.32));
+}
+
+body.page-timeline .magic-node-light {
+  background: radial-gradient(circle, #ffffff 0%, #f7c86a 42%, #2f9faa 100%);
+  box-shadow:
+    0 0 18px rgba(247, 200, 106, 0.42),
+    0 0 30px rgba(143, 216, 232, 0.18);
+}
+
+body.page-timeline .group:hover .magic-node-light {
+  box-shadow:
+    0 0 22px rgba(255, 255, 255, 0.74),
+    0 0 34px rgba(247, 200, 106, 0.48);
+}
+
+body.page-timeline .magic-card-light {
+  color: var(--portfolio-body);
+  background:
+    linear-gradient(180deg, rgba(13, 27, 42, 0.82), rgba(10, 24, 38, 0.7)),
+    rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--portfolio-card-border);
+  box-shadow:
+    0 22px 52px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(135%);
+}
+
+body.page-timeline .group:hover .magic-card-light {
+  background:
+    linear-gradient(180deg, rgba(16, 40, 60, 0.88), rgba(10, 24, 38, 0.78)),
+    rgba(255, 255, 255, 0.06);
+  border-color: var(--portfolio-card-border-strong);
+  box-shadow:
+    0 26px 58px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.page-timeline .magic-card-light h3,
+body.page-timeline .magic-card-light .group-hover\:text-amber-500 {
+  color: var(--portfolio-heading);
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.26);
+}
+
+body.page-timeline .magic-card-light p,
+body.page-timeline .magic-card-light .group-hover\:text-stone-800 {
+  color: var(--portfolio-body);
 }
