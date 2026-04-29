@@ -911,7 +911,7 @@ body.is-ready .portfolio-hero::after {
 }
 
 .landing-module-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 20px;
   perspective: 1400px;
 }
@@ -1099,6 +1099,10 @@ html.js-motion body.page-home.is-ready .landing-module-link:nth-child(4) {
 
 html.js-motion body.page-home.is-ready .landing-module-link:nth-child(5) {
   transition-delay: 740ms;
+}
+
+html.js-motion body.page-home.is-ready .landing-module-link:nth-child(6) {
+  transition-delay: 820ms;
 }
 
 html.js-motion body.page-home.is-ready .landing-hero::before {
@@ -1294,6 +1298,16 @@ body.is-ready .section.portfolio-section::after {
   color: var(--muted);
 }
 
+.section.portfolio-section > .container > .section-block > .block-header .block-kicker {
+  color: var(--hero-subtitle);
+  text-shadow: 0 6px 20px rgba(7, 16, 28, 0.22);
+}
+
+.section.portfolio-section > .container > .section-block > .block-header h2 {
+  color: #f6fbff;
+  text-shadow: 0 8px 24px rgba(7, 16, 28, 0.34);
+}
+
 .portfolio-hero .block-kicker,
 .portfolio-hero .block-header h2 {
   color: #ffffff;
@@ -1355,6 +1369,110 @@ body.is-ready .section.portfolio-section::after {
   background: var(--highlight-soft);
   color: #8a5b00;
   font-weight: 800;
+}
+
+.timeline-shell {
+  position: relative;
+  display: grid;
+  gap: 28px;
+  padding: 6px 0 10px;
+}
+
+.timeline-shell::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 132px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--highlight) 0%, var(--accent) 100%);
+  opacity: 0.7;
+}
+
+.timeline-week {
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.timeline-week::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 126px;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  border: 3px solid #ffffff;
+  border-radius: 999px;
+  background: var(--highlight);
+  box-shadow: 0 8px 18px rgba(7, 16, 28, 0.22);
+}
+
+.timeline-week-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(15, 31, 47, 0.92);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  box-shadow: 0 14px 26px rgba(7, 16, 28, 0.16);
+}
+
+.timeline-items {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline-card {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  min-height: 118px;
+  padding-left: 82px;
+}
+
+.surface-card.timeline-card {
+  padding-left: 82px;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 26px;
+  left: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--highlight) 100%);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(20, 116, 111, 0.18);
+}
+
+.timeline-card h3 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.18;
+}
+
+.timeline-card p {
+  color: var(--muted-strong);
 }
 
 .narrative-card p + p,
@@ -2971,7 +3089,7 @@ code {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: min(900px, calc(100vw - 96px));
+    width: min(1040px, calc(100vw - 96px));
     min-height: 58px;
     padding: 9px 12px;
     border: 1px solid rgba(255, 255, 255, 0.24);
@@ -3127,7 +3245,7 @@ code {
 
 @media (min-width: 1024px) and (max-width: 1120px) and (min-height: 620px) and (hover: hover) and (pointer: fine) {
   .desktop-top-nav {
-    width: min(760px, calc(100vw - 86px));
+    width: min(940px, calc(100vw - 86px));
     gap: 5px;
   }
 
@@ -3211,6 +3329,36 @@ code {
 
   .landing-module-grid {
     grid-template-columns: 1fr;
+  }
+
+  .timeline-shell {
+    gap: 22px;
+  }
+
+  .timeline-shell::before,
+  .timeline-week::before {
+    display: none;
+  }
+
+  .timeline-week {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .timeline-week-label {
+    justify-self: start;
+    min-height: 38px;
+    font-size: 0.86rem;
+  }
+
+  .surface-card.timeline-card {
+    min-height: 0;
+    padding: 22px 20px 22px 76px;
+  }
+
+  .timeline-marker {
+    top: 22px;
+    left: 20px;
   }
 
   .section {
