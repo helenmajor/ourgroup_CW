@@ -115,6 +115,96 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  const initVibeLoop = () => {
+    const section = document.querySelector(".vibe-loop-section");
+    if (!section) {
+      return;
+    }
+
+    const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const revealItems = Array.from(
+      section.querySelectorAll("[data-vibe-loop-reveal], [data-vibe-loop-step]")
+    );
+    const steps = Array.from(section.querySelectorAll("[data-vibe-loop-step]"));
+    const toggles = Array.from(section.querySelectorAll(".vibe-loop-card-button"));
+
+    section.classList.add("is-enhanced");
+
+    toggles.forEach((toggle) => {
+      const detailId = toggle.getAttribute("aria-controls");
+      const detail = detailId ? document.getElementById(detailId) : null;
+      const step = toggle.closest("[data-vibe-loop-step]");
+      const label = toggle.querySelector(".vibe-loop-toggle-label");
+
+      const setExpanded = (expanded) => {
+        toggle.setAttribute("aria-expanded", String(expanded));
+        step?.classList.toggle("is-expanded", expanded);
+
+        if (detail) {
+          detail.hidden = !expanded;
+        }
+
+        if (label) {
+          label.textContent = expanded ? "Hide details" : "Show details";
+        }
+      };
+
+      setExpanded(toggle.getAttribute("aria-expanded") === "true");
+
+      toggle.addEventListener("click", () => {
+        setExpanded(toggle.getAttribute("aria-expanded") !== "true");
+      });
+    });
+
+    const revealAll = () => {
+      revealItems.forEach((item) => {
+        item.classList.add("is-visible");
+      });
+
+      if (steps[0]) {
+        steps[0].classList.add("is-active");
+      }
+    };
+
+    if (reducedMotionQuery.matches || !("IntersectionObserver" in window)) {
+      revealAll();
+      return;
+    }
+
+    const setActiveStep = (activeStep) => {
+      steps.forEach((step) => {
+        step.classList.toggle("is-active", step === activeStep);
+      });
+    };
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+
+          if (entry.target.matches("[data-vibe-loop-step]")) {
+            setActiveStep(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -20% 0px",
+        threshold: 0.24,
+      }
+    );
+
+    revealItems.forEach((item) => {
+      revealObserver.observe(item);
+    });
+  };
+
+  initVibeLoop();
+
   body.classList.add("is-ready");
 });
 
