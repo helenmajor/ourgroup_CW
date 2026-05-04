@@ -121,14 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const revealItems = Array.from(
       section.querySelectorAll("[data-vibe-loop-reveal], [data-vibe-loop-step]")
     );
     const steps = Array.from(section.querySelectorAll("[data-vibe-loop-step]"));
     const toggles = Array.from(section.querySelectorAll(".vibe-loop-card-button"));
-
-    section.classList.add("is-enhanced");
 
     toggles.forEach((toggle) => {
       const detailId = toggle.getAttribute("aria-controls");
@@ -166,41 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    if (reducedMotionQuery.matches || !("IntersectionObserver" in window)) {
-      revealAll();
-      return;
-    }
-
-    const setActiveStep = (activeStep) => {
-      steps.forEach((step) => {
-        step.classList.toggle("is-active", step === activeStep);
-      });
-    };
-
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          }
-
-          entry.target.classList.add("is-visible");
-
-          if (entry.target.matches("[data-vibe-loop-step]")) {
-            setActiveStep(entry.target);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px 0px -20% 0px",
-        threshold: 0.24,
-      }
-    );
-
-    revealItems.forEach((item) => {
-      revealObserver.observe(item);
-    });
+    revealAll();
   };
 
   initVibeLoop();

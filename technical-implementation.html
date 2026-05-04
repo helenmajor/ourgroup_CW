@@ -91,21 +91,21 @@
             <div class="block-header">
               <div>
                 <p class="block-kicker">System Architecture</p>
-                <h2>A simple front-end structure supports a clear and readable case-study presentation</h2>
+                <h2>A full-stack prototype architecture supports a clear, testable coursework system</h2>
               </div>
             </div>
 
             <p class="block-lead">
-              The coursework site is intentionally lightweight. The emphasis is on
-              semantic structure, responsive layout, and a strong visual hierarchy rather
-              than complex interaction logic.
+              The final system combines a Vue frontend, Spring Boot backend, JWT
+              authentication, cloud deployment, and a portfolio layer that explains
+              how the prototype was designed, tested, and evaluated.
             </p>
 
             <figure class="system-architecture-figure">
               <img
                 src="assets/images/architecture/system-architecture.png"
                 alt="Full-stack system architecture showing Vue frontend, Spring Boot backend, JWT authentication, and cloud deployment flow"
-                loading="lazy"
+                loading="eager"
               />
               <figcaption>
                 Full-stack architecture overview for EduMap Journey, including
@@ -180,7 +180,7 @@
                     <img
                       src="assets/images/hifi/teacher-side.png"
                       alt="High-fidelity teacher-side dashboard interface"
-                      loading="lazy"
+                      loading="eager"
                     />
                     <figcaption>Teacher-side Interface</figcaption>
                   </figure>
@@ -188,7 +188,7 @@
                     <img
                       src="assets/images/hifi/student-side.png"
                       alt="High-fidelity student-side gameplay and task interface"
-                      loading="lazy"
+                      loading="eager"
                     />
                     <figcaption>Student-side Interface</figcaption>
                   </figure>
@@ -234,20 +234,20 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Danyi Huang</strong></td>
-                  <td>Backend architecture, Spring Boot integration, database design, and API coordination.</td>
+                  <td data-label="Group Member"><strong>Danyi Huang</strong></td>
+                  <td data-label="Core Responsibilities">Backend architecture, Spring Boot integration, database design, and API coordination.</td>
                 </tr>
                 <tr>
-                  <td><strong>Yuxin Zou</strong></td>
-                  <td>Frontend development, Vue 3 interaction logic, RPG mechanics implementation, and prototype integration.</td>
+                  <td data-label="Group Member"><strong>Yuxin Zou</strong></td>
+                  <td data-label="Core Responsibilities">Game flow design, frontend UI refinement, Vue 3 interaction logic, RPG mechanics implementation, prototype integration, and portfolio content updates.</td>
                 </tr>
                 <tr>
-                  <td><strong>Xinlan Wu</strong></td>
-                  <td>UI/UX visual design, Figma high-fidelity prototyping, portfolio restructuring, and graphic asset preparation.</td>
+                  <td data-label="Group Member"><strong>Xinlan Wu</strong></td>
+                  <td data-label="Core Responsibilities">UI/UX visual design, Figma high-fidelity prototyping, portfolio restructuring, and graphic asset preparation.</td>
                 </tr>
                 <tr>
-                  <td><strong>Yihan Fu</strong></td>
-                  <td>User research, surveys and interviews, usability testing, journey logic, and content strategy.</td>
+                  <td data-label="Group Member"><strong>Yihan Fu</strong></td>
+                  <td data-label="Core Responsibilities">User research, surveys and interviews, usability testing, journey logic, and content strategy.</td>
                 </tr>
               </tbody>
             </table>
@@ -502,12 +502,12 @@
           >
             <div class="vibe-loop-evidence-copy">
               <p class="mini-label">Process evidence</p>
-              <h3 id="vibe-loop-evidence-title">Evidence of Prompt Version Management</h3>
+              <h3 id="vibe-loop-evidence-title">AI-assisted process evidence</h3>
               <p>
-                We managed prompts as versioned design artefacts. Each record
-                included the prompt goal, AI output summary, problems found during
-                review, human modification decisions and the related user
-                requirement.
+                We treated AI outputs as reviewable engineering artefacts: prompts
+                were versioned, generated solutions were checked by humans, backend
+                and frontend tests were rerun, and Git history was used to track
+                integration.
               </p>
             </div>
 
@@ -517,7 +517,7 @@
                   class="vibe-loop-evidence-image"
                   src="assets/images/evidence/vibe-prompt-version-records.png"
                   alt="Prompt management table showing prompt IDs, modules, node names, design principles and full prompt content"
-                  loading="lazy"
+                  loading="eager"
                 />
                 <figcaption>Prompt Version Records</figcaption>
               </figure>
@@ -527,20 +527,39 @@
                   class="vibe-loop-evidence-image"
                   src="assets/images/evidence/vibe-human-review-notes.png"
                   alt="Human review record showing AI solution summary, accessibility issues, date and design decisions"
-                  loading="lazy"
+                  loading="eager"
                 />
                 <figcaption>Human Review Notes</figcaption>
               </figure>
 
               <figure class="vibe-loop-evidence-card">
-                <div
-                  class="vibe-loop-evidence-placeholder"
-                  role="img"
-                  aria-label="Placeholder for Git and testing evidence screenshot"
-                >
-                  <span>GT</span>
-                </div>
-                <figcaption>Git / Testing Evidence</figcaption>
+                <img
+                  class="vibe-loop-evidence-image is-terminal"
+                  src="assets/images/evidence/vibe-backend-test-results.png"
+                  alt="Backend Maven test output showing 14 JUnit tests passing with 0 failures, 0 errors and build success"
+                  loading="eager"
+                />
+                <figcaption>Backend Test Verification</figcaption>
+              </figure>
+
+              <figure class="vibe-loop-evidence-card">
+                <img
+                  class="vibe-loop-evidence-image is-terminal"
+                  src="assets/images/evidence/vibe-frontend-test-results.png"
+                  alt="Frontend terminal output showing Vitest unit tests and Playwright end-to-end tests passing"
+                  loading="eager"
+                />
+                <figcaption>Frontend Test Verification</figcaption>
+              </figure>
+
+              <figure class="vibe-loop-evidence-card">
+                <img
+                  class="vibe-loop-evidence-image is-git"
+                  src="assets/images/evidence/vibe-git-process.png"
+                  alt="Git commit graph showing feature branches, pull request merges, authors and timestamps"
+                  loading="eager"
+                />
+                <figcaption>Git Version Control Process</figcaption>
               </figure>
             </div>
           </aside>

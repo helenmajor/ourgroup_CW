@@ -99,6 +99,7 @@
               <thead>
                 <tr>
                   <th>Requirement (R)</th>
+                  <th>Linked Key Requirements</th>
                   <th>Design Goal (DG)</th>
                   <th>System Feature (F)</th>
                   <th>Evaluation Evidence (E)</th>
@@ -107,30 +108,35 @@
               <tbody>
                 <tr>
                   <td><strong>R1: Progress Visibility</strong></td>
+                  <td>KR7: task tracking; KR8: visual progress feedback; Must-have 1: staged journey map.</td>
                   <td>DG1: Reduce planning uncertainty.</td>
                   <td>F1: Journey map and visual progress nodes.</td>
                   <td>E1: Clarity score and task success rate in usability testing.</td>
                 </tr>
                 <tr>
                   <td><strong>R2: Personalised Pathway</strong></td>
+                  <td>KR3: multi-dimensional user profile; KR4: lightweight dynamic adjustment.</td>
                   <td>DG2: Support different student stages, such as Year 2 and Year 4.</td>
                   <td>F2: Profile-based branching and dynamic stage guidance.</td>
                   <td>E2: Perceived relevance score from mixed-year participants.</td>
                 </tr>
                 <tr>
                   <td><strong>R3: Playful Reward Loop</strong></td>
+                  <td>KR1: cross-context rewards; KR2: intrinsic and extrinsic motivation; KR9: modular gamification.</td>
                   <td>DG3: Sustain long-term motivation.</td>
                   <td>F3: RPG quests, XP, coins, and offline reward exchange.</td>
                   <td>E3: Motivation score and Hedonic Quality (UEQ).</td>
                 </tr>
                 <tr>
                   <td><strong>R4: Decision Comparison</strong></td>
+                  <td>KR5: non-linear exploratory interaction; KR10: low cognitive load.</td>
                   <td>DG4: Help users compare complex options.</td>
                   <td>F4: Program and university selection interactions.</td>
                   <td>E4: Completion time for the option comparison task.</td>
                 </tr>
                 <tr>
                   <td><strong>R5: Advisor Support</strong></td>
+                  <td>KR6: AI-assisted narrative feedback; KR8: class-level progress feedback; KR10: low cognitive load.</td>
                   <td>DG5: Keep serious planning accountable.</td>
                   <td>F5: Advisor monitoring dashboard and transparent AI.</td>
                   <td>E5: Trust and usefulness feedback from the teacher persona.</td>
@@ -234,13 +240,32 @@
             </table>
           </div>
 
+          <article class="surface-card narrative-card">
+            <p class="mini-label">Anonymous Feedback Quotes</p>
+            <p>
+              P1, Year 2 student: "The map makes the application process feel less
+              scattered because I can see what comes next instead of reading a long
+              checklist."
+            </p>
+            <p>
+              P2, Year 3 student: "The crafting idea is interesting, but I need
+              clearer wording so I know which academic material each game action
+              represents."
+            </p>
+            <p>
+              P3, advisor persona: "The teacher dashboard is useful, but the risk
+              level and intervention timing should be more explicit before I can act
+              on it confidently."
+            </p>
+          </article>
+
           <div class="chart-card-grid evaluation-chart-grid">
             <article class="surface-card chart-analysis-card">
               <figure class="chart-media">
                 <img
                   src="assets/images/evaluation/ueq-six-dimensions.png"
                   alt="UEQ radar chart showing six dimensions of system performance"
-                  loading="lazy"
+                  loading="eager"
                 />
               </figure>
               <div class="chart-copy">
@@ -287,7 +312,7 @@
                 <img
                   src="assets/images/evaluation/macro-qualities.png"
                   alt="Bar chart comparing attractiveness, pragmatic quality, and hedonic quality"
-                  loading="lazy"
+                  loading="eager"
                 />
               </figure>
               <div class="chart-copy">
@@ -345,7 +370,7 @@
                 <img
                   src="assets/images/iteration/iteration-before.png"
                   alt="Before iteration screen with lighter information density"
-                  loading="lazy"
+                  loading="eager"
                 />
                 <figcaption>Before</figcaption>
               </figure>
@@ -353,7 +378,7 @@
                 <img
                   src="assets/images/iteration/iteration-after.png"
                   alt="After iteration screen with richer information and more detailed content"
-                  loading="lazy"
+                  loading="eager"
                 />
                 <figcaption>After</figcaption>
               </figure>
@@ -482,44 +507,44 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>
+                  <td data-label="Member">
                     <div class="member-cell">
                       <img class="table-portrait" src="assets/images/member1.jpg" alt="Portrait of Danyi Huang" />
                       <span>Danyi Huang</span>
                     </div>
                   </td>
-                  <td>2364444</td>
-                  <td>Contribution focus: concept framing, motivation narrative, and communicating the value of a gamified planning journey. Structured the initial problem space and translated user pain points into a clear and engaging design vision, supporting early-stage direction setting.</td>
+                  <td data-label="Student ID">2364444</td>
+                  <td data-label="Contribution Focus">Contribution focus: concept framing, motivation narrative, and communicating the value of a gamified planning journey. Structured the initial problem space and translated user pain points into a clear and engaging design vision, supporting early-stage direction setting.</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td data-label="Member">
                     <div class="member-cell">
                       <img class="table-portrait" src="assets/images/member2.jpg" alt="Portrait of Yuxin Zou" />
                       <span>Yuxin Zou</span>
                     </div>
                   </td>
-                  <td>2361355</td>
-                  <td>Contribution focus: user context synthesis, interaction critique, and improving how complex information is communicated. Analysed user behaviour and refined interaction clarity, ensuring information is structured, accessible, and aligned with user understanding.</td>
+                  <td data-label="Student ID">2361355</td>
+                  <td data-label="Contribution Focus">Contribution focus: game flow design, user context synthesis, web UI refinement, and portfolio content improvement. Designed the RPG journey flow and step-by-step interaction structure, refined front-end UI details, and updated part of the portfolio content so the system logic, visual interface, and user-facing explanation were more consistent.</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td data-label="Member">
                     <div class="member-cell">
                       <img class="table-portrait" src="assets/images/member3.jpg" alt="Portrait of Yihan Fu" />
                       <span>Yihan Fu</span>
                     </div>
                   </td>
-                  <td>2362845</td>
-                  <td>Contribution focus: journey planning logic, interface structuring, and step-by-step flow refinement. Developed the progression structure and supported the user journey design, ensuring a coherent and intuitive experience across different stages.</td>
+                  <td data-label="Student ID">2362845</td>
+                  <td data-label="Contribution Focus">Contribution focus: journey planning logic, interface structuring, and step-by-step flow refinement. Developed the progression structure and supported the user journey design, ensuring a coherent and intuitive experience across different stages.</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td data-label="Member">
                     <div class="member-cell">
                       <img class="table-portrait" src="assets/images/member4.jpg" alt="Portrait of Xinlan Wu" />
                       <span>Xinlan Wu</span>
                     </div>
                   </td>
-                  <td>2361130</td>
-                  <td>Contribution focus: portfolio restructuring, system design integration, and journey interaction logic. Translated literature insights into structured requirements and supported the alignment of user needs, HCI principles, and the final case-study presentation.</td>
+                  <td data-label="Student ID">2361130</td>
+                  <td data-label="Contribution Focus">Contribution focus: portfolio restructuring, system design integration, and journey interaction logic. Translated literature insights into structured requirements and supported the alignment of user needs, HCI principles, and the final case-study presentation.</td>
                 </tr>
               </tbody>
             </table>
