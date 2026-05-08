@@ -265,7 +265,9 @@
             <p class="section-lead">
               We used AI as a coding assistant, but each output was controlled
               through structured prompting, human review, testing, UX evaluation
-              and version tracking.
+              and version tracking. AI support did not define the project
+              motivation, research findings, core design logic, or human-centred
+              justification.
             </p>
           </div>
 
@@ -308,7 +310,11 @@
                     For each node, such as the Y2-3 school matching task, our
                     prompt included the target user background, the learning goal,
                     the game mechanism, technical constraints, state management,
-                    accessibility requirements and testing expectations.
+                    accessibility requirements and testing expectations. Typical
+                    prompts asked AI tools to scaffold Vue 3 task-flow components,
+                    debug Spring Boot or JWT integration issues, refine responsive
+                    CSS, and draft test cases for behaviours already specified by
+                    our group.
                   </p>
                 </div>
               </article>
@@ -475,11 +481,11 @@
               <p class="mini-label">What Worked</p>
               <h3>LLMs accelerated layout, copy, and boilerplate implementation</h3>
               <p>
-                Using Cursor and ChatGPT significantly accelerated frontend layout
-                generation, Tailwind CSS iteration, and bilingual UI copy refinement.
-                This saved boilerplate coding time and allowed the team to spend more
-                effort on human-centred design decisions, evidence alignment, and
-                interaction evaluation.
+                Using OpenAI Codex and ChatGPT significantly accelerated
+                frontend layout generation, Tailwind CSS iteration, bilingual UI copy
+                refinement, and final AI-use disclosure review. This saved boilerplate
+                coding time and allowed the team to spend more effort on human-centred
+                design decisions, evidence alignment, and interaction evaluation.
               </p>
             </article>
 
@@ -491,6 +497,44 @@
                 reactivity in Vue 3 for the RPG progression system, and with complex
                 accessibility edge cases. These areas required manual architectural
                 decisions, human debugging, and review before integration.
+              </p>
+            </article>
+
+            <article class="vibe-loop-reflection-card is-technical-reflection">
+              <p class="mini-label">Technical Reflection</p>
+              <h3>Technical Reflection on AI-Assisted Development</h3>
+              <p>
+                OpenAI Codex was used as a coding assistant during the system
+                implementation stage. It was not used to define the project
+                motivation, user research findings, core design logic, or
+                human-centred justification. These decisions were made by the
+                group.
+              </p>
+              <p>Representative prompts included:</p>
+              <ul class="reflection-prompt-list">
+                <li>"Inspect this Vue 3 and Spring Boot project and explain the current frontend/backend structure."</li>
+                <li>"Help debug the API connection between the Vue frontend and the Spring Boot backend."</li>
+                <li>"Suggest how to implement or improve authentication, student progress tracking, reward/shop logic, and teacher dashboard functions."</li>
+                <li>"Check whether the current implementation can be verified with Maven compilation and frontend build commands."</li>
+                <li>"Help refine localisation and UI-related code while keeping the existing project structure."</li>
+              </ul>
+              <p>
+                AI-generated suggestions were not accepted automatically. Group
+                members reviewed whether the code matched the intended user
+                requirements and tested the main system flows, including login,
+                student progress, level completion, shop/reward functions, and
+                teacher monitoring. The backend was checked through Maven
+                compilation and local API testing, while the frontend was checked
+                through build verification and manual browser testing.
+              </p>
+              <p>
+                Ethical considerations were also reviewed by the group. Since
+                AI-generated code can contain hallucinated logic, insecure
+                assumptions, or accessibility issues, the group checked whether
+                the implementation was understandable, maintainable, and
+                appropriate for the target users. Accessibility considerations
+                included readable interface text, clear user feedback, and
+                consistent navigation.
               </p>
             </article>
           </div>
