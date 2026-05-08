@@ -2095,6 +2095,12 @@ body.is-ready .section.portfolio-section::after {
   gap: 12px;
 }
 
+.persona-visual {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
 .visual-label,
 .artifact-tag {
   display: inline-flex;
@@ -2125,6 +2131,15 @@ body.is-ready .section.portfolio-section::after {
     transform 1s var(--motion-soft),
     box-shadow var(--duration-medium) var(--motion-soft),
     filter var(--duration-medium) var(--motion-soft);
+}
+
+.persona-ai-caption {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .journey-frame {
@@ -3041,7 +3056,7 @@ body.is-ready .section.portfolio-section::after {
 
 .vibe-loop-reflection-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
 
@@ -3071,6 +3086,22 @@ body.is-ready .section.portfolio-section::after {
 
 .vibe-loop-reflection-card p:not(.mini-label) {
   color: var(--vibe-loop-text);
+}
+
+.vibe-loop-reflection-card.is-technical-reflection {
+  grid-column: 1 / -1;
+}
+
+.reflection-prompt-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--vibe-loop-text);
+}
+
+.reflection-prompt-list li {
+  line-height: 1.58;
 }
 
 .vibe-loop-evidence-copy {
@@ -3317,6 +3348,12 @@ code {
 .reference-group {
   display: grid;
   gap: 12px;
+}
+
+.reference-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .reference-list {
