@@ -2496,26 +2496,30 @@ body.is-ready .section.portfolio-section::after {
 }
 
 #user-requirements .evidence-card:nth-child(1) .evidence-caption::before {
-  --icon: url("public/icons/chat.svg");
+  --icon: url("public/icons/video.svg");
 }
 
 #user-requirements .evidence-card:nth-child(2) .evidence-caption::before {
-  --icon: url("public/icons/users.svg");
+  --icon: url("public/icons/chat.svg");
 }
 
 #user-requirements .evidence-card:nth-child(3) .evidence-caption::before {
-  --icon: url("public/icons/test.svg");
+  --icon: url("public/icons/users.svg");
 }
 
 #user-requirements .evidence-card:nth-child(4) .evidence-caption::before {
-  --icon: url("public/icons/shield.svg");
+  --icon: url("public/icons/test.svg");
 }
 
 #user-requirements .evidence-card:nth-child(5) .evidence-caption::before {
-  --icon: url("public/icons/document.svg");
+  --icon: url("public/icons/shield.svg");
 }
 
 #user-requirements .evidence-card:nth-child(6) .evidence-caption::before {
+  --icon: url("public/icons/document.svg");
+}
+
+#user-requirements .evidence-card:nth-child(7) .evidence-caption::before {
   --icon: url("public/icons/video.svg");
 }
 
