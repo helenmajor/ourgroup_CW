@@ -1,6 +1,6 @@
 # EduJourney_Protfolio
 
-This repository contains the coursework portfolio website for **EduJourney**.
+This repository contains the coursework protfolio website for **EduJourney**.
 
 ## How to View
 
@@ -14,6 +14,7 @@ open index.html   # macOS
 start index.html  # Windows
 # or
 xdg-open index.html # Linux
+```
 
 ## Portfolio Contents
 
