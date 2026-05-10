@@ -1,4 +1,4 @@
-# EduJourney_Protfolio
+# EduMapJourney_Protfolio
 
 This repository contains the coursework protfolio website for **EduJourney**.
 
