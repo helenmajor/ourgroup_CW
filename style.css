@@ -3633,6 +3633,43 @@ code {
   padding: 0;
 }
 
+.usability-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.usability-evidence-card {
+  margin: 0;
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.usability-evidence-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(214, 234, 246, 0.18);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+.usability-evidence-card figcaption {
+  margin: 0;
+  color: var(--portfolio-body);
+  font-size: 0.94rem;
+  line-height: 1.58;
+}
+
+.usability-evidence-card figcaption strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--portfolio-heading);
+}
+
 .matrix-table {
   width: 100%;
   min-width: 920px;
@@ -4129,6 +4166,7 @@ code {
   .reflection-grid,
   .ai-reflection-cases,
   .gap-analysis-columns,
+  .usability-evidence-grid,
   .comparison-frame {
     grid-template-columns: 1fr;
   }
