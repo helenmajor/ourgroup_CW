@@ -860,8 +860,11 @@ body.is-ready .portfolio-hero::after {
 }
 
 .landing-demo-wrap {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+  max-width: 980px;
 }
 
 .landing-demo-link {
@@ -870,7 +873,9 @@ body.is-ready .portfolio-hero::after {
   isolation: isolate;
   display: grid;
   gap: 12px;
-  min-width: min(100%, 440px);
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   min-height: 178px;
   align-content: center;
   padding: 30px 34px;
@@ -886,12 +891,17 @@ body.is-ready .portfolio-hero::after {
     0 0 0 1px rgba(255, 255, 255, 0.06) inset;
   backdrop-filter: blur(14px);
   transition:
-    transform 0.28s ease,
-    box-shadow 0.28s ease,
-    border-color 0.28s ease,
-    background 0.28s ease;
+    transform 0.35s var(--motion-soft),
+    box-shadow 0.35s var(--motion-soft),
+    border-color 0.35s var(--motion-soft),
+    background 0.35s var(--motion-soft),
+    backdrop-filter 0.35s var(--motion-soft);
   animation: landing-demo-pulse 3.8s ease-in-out infinite;
   will-change: transform, box-shadow;
+}
+
+.landing-demo-link.landing-repo-link {
+  animation-delay: 0.45s;
 }
 
 .landing-demo-link::before,
@@ -930,6 +940,7 @@ body.is-ready .portfolio-hero::after {
     0 24px 46px rgba(8, 15, 25, 0.28),
     0 0 28px rgba(245, 158, 11, 0.12),
     0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  backdrop-filter: blur(18px) saturate(112%);
 }
 
 .landing-demo-link:hover::after {
@@ -942,22 +953,31 @@ body.is-ready .portfolio-hero::after {
 
 .landing-demo-link strong,
 .landing-demo-link small,
-.landing-demo-badge {
+.landing-demo-badge,
+.landing-demo-note,
+.landing-demo-action {
   position: relative;
   z-index: 1;
+  max-width: 100%;
 }
 
 .landing-demo-link strong {
+  display: block;
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.3vw, 1.65rem);
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: #ffffff;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .landing-demo-link small {
+  display: block;
   color: rgba(255, 255, 255, 0.78);
   font-size: 1.06rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .landing-demo-badge {
@@ -1071,16 +1091,51 @@ body.is-ready .portfolio-hero::after {
 }
 
 .landing-demo-note {
+  display: block;
   position: relative;
   z-index: 1;
   color: rgba(255, 255, 255, 0.62);
   font-size: 0.78rem;
   line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .landing-demo-note strong {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 700;
+}
+
+.landing-demo-action {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--hero-bg);
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  overflow-wrap: anywhere;
+  box-shadow: 0 12px 24px rgba(8, 15, 25, 0.18);
+  transition:
+    transform 0.35s var(--motion-emphasis),
+    box-shadow 0.35s var(--motion-soft),
+    background 0.35s var(--motion-soft);
+}
+
+.landing-demo-action:hover {
+  transform: scale(1.035);
+  background: #ffffff;
+  box-shadow:
+    0 16px 30px rgba(8, 15, 25, 0.22),
+    0 0 24px rgba(245, 158, 11, 0.24);
 }
 
 .landing-guidance-note {
@@ -4193,6 +4248,10 @@ code {
     min-width: 0;
   }
 
+  .landing-demo-wrap {
+    max-width: 100%;
+  }
+
   .ideation-layout {
     grid-template-columns: 1fr;
   }
@@ -4544,6 +4603,10 @@ code {
     grid-template-columns: 1fr;
   }
 
+  .landing-demo-wrap {
+    grid-template-columns: 1fr;
+  }
+
   #guidance-design-title {
     white-space: normal;
   }
@@ -4639,6 +4702,10 @@ code {
 
   .portfolio-hero h1 {
     font-size: 2.45rem;
+  }
+
+  .landing-demo-link {
+    padding: 26px 24px;
   }
 
   .hero-tagline {
