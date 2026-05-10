@@ -1,6 +1,6 @@
 # EduMapJourney_Protfolio
 
-This repository contains the coursework protfolio website for **EduJourney**.
+This repository contains the coursework protfolio website for **EduMapJourney**.
 
 ## How to View
 
