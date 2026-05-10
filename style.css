@@ -5192,3 +5192,141 @@ body.page-timeline .magic-card-light .group-hover\:text-stone-800 {
   font-weight: 600;
   text-shadow: 0 0 8px rgba(247, 200, 106, 0.2); /* 与你的金色高光呼应 */
 }
+
+.highlight-keyword {
+  display: inline;
+  padding: 0 0.18em;
+  border-radius: 0.45em;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 241, 207, 0) 0%,
+    rgba(255, 241, 207, 0) 48%,
+    rgba(255, 241, 207, 0.78) 48%,
+    rgba(255, 241, 207, 0.78) 100%
+  );
+  color: inherit;
+  font-weight: 800;
+}
+
+.evidence-tag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 116, 141, 0.2);
+  background: rgba(20, 116, 141, 0.08);
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.insight-box,
+.important-note,
+.design-decision,
+.technical-reflection,
+.user-feedback {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  margin: 8px 0;
+  padding: 16px 18px 16px 20px;
+  border: 1px solid rgba(20, 116, 141, 0.18);
+  border-left: 4px solid var(--accent);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(20, 116, 141, 0.08), rgba(245, 158, 11, 0.06)),
+    rgba(255, 255, 255, 0.72);
+}
+
+:is(.insight-box, .important-note, .design-decision, .technical-reflection, .user-feedback)[data-label]::before {
+  content: attr(data-label);
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+:is(.insight-box, .important-note, .design-decision, .technical-reflection, .user-feedback) p {
+  margin: 0;
+}
+
+:is(.insight-box, .important-note, .design-decision, .technical-reflection, .user-feedback) p + p {
+  margin-top: 0;
+}
+
+.important-note {
+  border-left-color: var(--highlight);
+}
+
+.design-decision {
+  border-left-color: var(--accent-strong);
+}
+
+.technical-reflection {
+  border-left-color: #8fd8e8;
+}
+
+.user-feedback {
+  border-left-color: var(--subtitle-strong);
+}
+
+:is(#user-requirements, #ideation-alternatives, #technical-implementation, #evaluation-reflection, #project-timeline) .highlight-keyword {
+  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 200, 106, 0) 0%,
+    rgba(247, 200, 106, 0) 48%,
+    rgba(247, 200, 106, 0.28) 48%,
+    rgba(247, 200, 106, 0.28) 100%
+  );
+  text-shadow: 0 0 14px rgba(247, 200, 106, 0.16);
+}
+
+:is(#user-requirements, #ideation-alternatives, #technical-implementation, #evaluation-reflection, #project-timeline) :is(
+  .insight-box,
+  .important-note,
+  .design-decision,
+  .technical-reflection,
+  .user-feedback
+) {
+  border-color: rgba(214, 234, 246, 0.16);
+  border-left-color: var(--portfolio-highlight);
+  background:
+    linear-gradient(135deg, rgba(143, 216, 232, 0.1), rgba(247, 200, 106, 0.08)),
+    rgba(255, 255, 255, 0.045);
+  box-shadow: none;
+}
+
+:is(#user-requirements, #ideation-alternatives, #technical-implementation, #evaluation-reflection, #project-timeline) :is(
+  .insight-box,
+  .important-note,
+  .design-decision,
+  .technical-reflection,
+  .user-feedback
+)[data-label]::before {
+  background: linear-gradient(135deg, #9fe7f0, #f7c86a);
+  color: #07101b;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+#motivation-research .highlight-keyword {
+  color: var(--ink);
+}
+
+#motivation-research :is(.insight-box, .important-note, .design-decision, .technical-reflection, .user-feedback) {
+  background:
+    linear-gradient(135deg, rgba(20, 116, 141, 0.08), rgba(245, 158, 11, 0.06)),
+    rgba(255, 255, 255, 0.92);
+}
