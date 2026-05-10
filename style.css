@@ -1070,6 +1070,19 @@ body.is-ready .portfolio-hero::after {
   transform: translateY(-2px) scale(0.988);
 }
 
+.landing-demo-note {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.landing-demo-note strong {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+}
+
 .landing-guidance-note {
   display: grid;
   gap: 20px;
