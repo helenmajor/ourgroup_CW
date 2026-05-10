@@ -636,10 +636,17 @@
               <div class="ai-reflection-part">
                 <h4>Prompt</h4>
                 <p>
-                  Asked AI to extend the Guardian Guide level structure by reusing
-                  existing Vue components and drafting bilingual Year 2 / Year 3
-                  learning content.
+                  We gave AI the existing Vue context, the intended student stage,
+                  and the need to keep the original Guardian Guide structure. The
+                  representative prompts included:
                 </p>
+                <ul class="ai-reflection-list">
+                  <li>"Inspect this Vue 3 and Spring Boot project and explain the current frontend/backend structure, especially where student progress, level completion, and reward/shop logic are handled."</li>
+                  <li>"Suggest how to extend the Guardian Guide progression system for Year 2 and Year 3 students while reusing the existing Vue components instead of creating a new feature from scratch."</li>
+                  <li>"Draft bilingual English/Chinese level content for Year 2 students. Keep each task linked to one real planning activity, such as course selection, internship preparation, research exploration, or early postgraduate timeline awareness."</li>
+                  <li>"Draft Year 3 Guardian Guide levels with a higher difficulty. Connect each RPG action to a concrete application-planning task, such as comparing target universities, preparing documents, checking deadlines, and reviewing programme requirements."</li>
+                  <li>"Help refine localisation and UI-related code while keeping the existing project structure. Make the bilingual wording concise, student-friendly, and not too generic."</li>
+                </ul>
               </div>
 
               <div class="ai-reflection-part">
@@ -672,9 +679,18 @@
               <div class="ai-reflection-part">
                 <h4>Prompt</h4>
                 <p>
-                  Asked AI to restructure the portfolio into separate section-based
-                  pages with shared navigation and smoother transitions.
+                  We asked AI to analyse the portfolio navigation problem before
+                  generating code, then refined the prompt when the first result
+                  still felt like long scrolling. The representative prompts
+                  included:
                 </p>
+                <ul class="ai-reflection-list">
+                  <li>"Inspect the current portfolio HTML, CSS, and JavaScript structure. Explain why the navigation still feels like one long scrolling page instead of separate section-based pages."</li>
+                  <li>"Restructure the portfolio into separate section pages with shared navigation. Keep the existing visual identity, but make each navigation item feel like opening a different page rather than jumping to a hidden scroll section."</li>
+                  <li>"Add active navigation states, consistent header behaviour, and smoother transitions between sections. The interaction should clearly show which page the user is currently viewing."</li>
+                  <li>"Check the mobile drawer behaviour after the navigation change. Each menu link should open the correct section, update the active state, and close the drawer without leaving the page in an unclear state."</li>
+                  <li>"Review the spacing, transition timing, and repeated navigation markup. Keep the portfolio readable and avoid making the technical separation more important than the user experience."</li>
+                </ul>
               </div>
 
               <div class="ai-reflection-part">
