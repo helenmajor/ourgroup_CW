@@ -4952,3 +4952,21 @@ body.page-timeline .magic-card-light p,
 body.page-timeline .magic-card-light .group-hover\:text-stone-800 {
   color: var(--portfolio-body);
 }
+.heuristic-list {
+  margin-top: 1.25rem;
+  padding-left: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.heuristic-list li {
+  line-height: 1.6;
+  color: var(--portfolio-body);
+}
+
+.heuristic-list li strong {
+  color: var(--portfolio-highlight);
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(247, 200, 106, 0.2); /* 与你的金色高光呼应 */
+}
