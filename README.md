@@ -1,7 +1,6 @@
 # EduMapJourney_Protfolio
 
 This repository contains the coursework protfolio website for **EduMapJourney**.
-and this is the demo github link:https://github.com/danyih05/edujour
 
 ## How to View
 
